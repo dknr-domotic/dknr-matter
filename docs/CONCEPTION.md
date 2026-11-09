@@ -1,6 +1,6 @@
 # Conception de dknr-matter
 
-Document de conception rédigé avant le développement (novembre 2026). Il réunit le contexte, les éléments déjà vérifiés et les choix à faire, pour démarrer la construction dans une nouvelle discussion sans rien perdre.
+Document de conception rédigé avant le développement (novembre 2026). Il réunit le contexte, les éléments déjà vérifiés et les choix à faire. La section *Etat d'avancement* suit ce qui a été décidé et construit depuis.
 
 
 ## Objectif
@@ -20,6 +20,20 @@ But principal : remplacer à terme **dknr-alexa** et son abonnement Virtual Smar
 * **Réseau** : Matter utilise IPv6 (adresses locales de lien), la découverte mDNS et le port UDP 5540. Le conteneur doit tourner en `network_mode: host` avec IPv6 activé, ce qui est possible sur l'installation (comme le fait Matterbridge).
 
 
+## Etat d'avancement
+
+* **Brique Matter** : option **A** retenue (Node-RED + matter.js, `@matter/main` 0.18).
+* **Prototype** (version 0.1) : structure du dépôt reprise de dknr-alexa, pont `main`, page **Pont** (état, appairage par QR code, contrôleurs appairés, sources) et deux appareils de test (prise, température) choisis depuis le tableau de bord.
+* **Appareils** : pas d'import de la sauvegarde dknr-alexa, les appareils seront créés à la main dans dknr-matter (choix de novembre 2026).
+* **Ponts** : rangés par identifiant dans le code, un seul créé (`main`). Le choix entre un pont unique et plusieurs ponts reste ouvert jusqu'aux tests de stabilité sur un Echo : déplacer un appareil d'un pont à un autre le recrée dans les contrôleurs, il faut donc trancher avant la bascule depuis dknr-alexa.
+* **Vérifié sans contrôleur** : démarrage du pont dans Node-RED, codes d'appairage conservés au redéploiement et au redémarrage, ajout et retrait d'appareils à chaud, valeurs DKNR écrites dans les appareils Matter, ouverture et réinitialisation de l'appairage, refus de démarrer sans IPv6 ou si le port est pris (sans arrêter Node-RED).
+* **Reste à valider avec du matériel** : appairage à Home Assistant puis à un Echo Show 5, ordres d'un contrôleur vers `dknr/set`, stabilité dans le temps.
+* **Points relevés** :
+    * matter.js ouvre ses sockets en arrière-plan : une erreur à ce moment arrête Node-RED. Le port UDP et IPv6 sont donc testés avant chaque démarrage du pont.
+    * le code « à l'arrêt » d'un nœud function n'est pas attendu par Node-RED : le nouveau pont attend la fin de la fermeture de l'ancien avant de démarrer.
+    * en `network_mode: host`, le tableau de bord écoute sur le port 1880 de l'hôte (variable `PORT`) et non sur le port 80.
+
+
 ## Choix à faire
 
 ### 1. La brique Matter
@@ -36,7 +50,7 @@ Recommandation : **A**, pour rester dans la famille dknr et reprendre directemen
 
 ### 2. La configuration des appareils
 
-* **Option recommandée** : une page **Appareils** propre à dknr-matter, copiée de dknr-alexa (nom, pièce, type, une ou plusieurs entités DKNR, actif), avec un **import de la sauvegarde dknr-alexa** pour ne pas tout ressaisir (85 appareils).
+* **Option recommandée** : une page **Appareils** propre à dknr-matter, copiée de dknr-alexa (nom, pièce, type, une ou plusieurs entités DKNR, actif). Pas d'import de la sauvegarde dknr-alexa : les appareils sont créés à la main (décidé en novembre 2026).
 * Alternative : lire directement la configuration de dknr-alexa. Plus rapide au départ, mais lie les deux projets alors que dknr-alexa doit pouvoir disparaître.
 
 ### 3. Les types d'appareils
@@ -90,7 +104,7 @@ Comme dknr-alexa :
 
 ### Pages
 
-* **Appareils** : liste, ajout, modification, import de la sauvegarde dknr-alexa.
+* **Appareils** : liste, ajout, modification.
 * **Pont** : état du serveur Matter, code d'appairage et QR code, contrôleurs appairés (fabrics), bouton de réinitialisation de l'appairage.
 * **Configurer** : MQTT (hôte, port, utilisateur, mot de passe, topic `dknr`), sauvegarde et restauration.
 

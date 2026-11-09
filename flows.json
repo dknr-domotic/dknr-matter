@@ -1,0 +1,2285 @@
+[
+    {
+        "id": "4c2feff02c9aebaa",
+        "type": "tab",
+        "label": "common",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "48135a54600713e8",
+        "type": "tab",
+        "label": "custom",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bd90043835651de6",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - home uri",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "be68f32eed43e834",
+            "2704252b42b3faaf"
+        ],
+        "x": 134,
+        "y": 279,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "f734a4fcce4a0802",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - boot",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "d536608ecbe6516c",
+            "0744af34f2373571",
+            "47f04f56e95961a5",
+            "def7f23476f92a9e",
+            "34e54b81fe18b33f",
+            "d0ee4b417bfa2bb7"
+        ],
+        "x": 134,
+        "y": 39,
+        "w": 942,
+        "h": 82
+    },
+    {
+        "id": "87038dcf749d44c6",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - icon uri",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "31368f26faeeeec5",
+            "066905a23ee18843",
+            "9f90cc93644f80c4",
+            "a49cdba72413a587",
+            "9ba5455a5674c8a7"
+        ],
+        "x": 134,
+        "y": 159,
+        "w": 852,
+        "h": 82
+    },
+    {
+        "id": "ced6b0d6d8aa764d",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - mqtt",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "05b0c0afa2f55df1",
+            "b18dc51cbf75cc24",
+            "4ca2b0783078bb87",
+            "99def6db6b13ba9c",
+            "30335bf1ac7b99bc",
+            "25ce94531dd6fbe4",
+            "d5bdaec879cbd196",
+            "02dccf8f780a61d9",
+            "49a4236523d8a934"
+        ],
+        "x": 144,
+        "y": 399,
+        "w": 512,
+        "h": 202
+    },
+    {
+        "id": "6f2c0bf97f866aa6",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - error",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "fc147ee782462bbe",
+            "8b870d19217142fa",
+            "9f55bfd681e97786"
+        ],
+        "x": 144,
+        "y": 639,
+        "w": 462,
+        "h": 82
+    },
+    {
+        "id": "94ca764ef2760841",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - ui",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "08a5cf610c97d769",
+            "7adf1bcdd6df3b31",
+            "8760610a1e45ffab",
+            "5f28408f430feddf",
+            "3681864d9f417484",
+            "ddab942f6d49a661",
+            "d3965b3ecbc6aae9",
+            "300df28f3025dc33",
+            "0154b8f75648b065",
+            "e453d1f77363ac46"
+        ],
+        "x": 144,
+        "y": 759,
+        "w": 1092,
+        "h": 202
+    },
+    {
+        "id": "9f3c5b4c8836214c",
+        "type": "group",
+        "z": "4c2feff02c9aebaa",
+        "name": "common - mqtt - form",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "269fe06d582be842",
+            "913d3318a27c57f9",
+            "8b76a374e82e1255",
+            "094401b4b908ed63",
+            "901bc3883a87d865",
+            "ca5c502dcbc1ee15"
+        ],
+        "x": 144,
+        "y": 999,
+        "w": 872,
+        "h": 82
+    },
+    {
+        "id": "be68f32eed43e834",
+        "type": "http in",
+        "z": "4c2feff02c9aebaa",
+        "g": "bd90043835651de6",
+        "name": "",
+        "url": "/",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "2704252b42b3faaf"
+            ]
+        ]
+    },
+    {
+        "id": "2704252b42b3faaf",
+        "type": "http response",
+        "z": "4c2feff02c9aebaa",
+        "g": "bd90043835651de6",
+        "name": "",
+        "statusCode": "307",
+        "headers": {
+            "Location": "/dashboard"
+        },
+        "x": 380,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d536608ecbe6516c",
+        "type": "inject",
+        "z": "4c2feff02c9aebaa",
+        "g": "f734a4fcce4a0802",
+        "name": "boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "jsonata",
+        "x": 230,
+        "y": 80,
+        "wires": [
+            [
+                "0744af34f2373571"
+            ]
+        ]
+    },
+    {
+        "id": "0744af34f2373571",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "f734a4fcce4a0802",
+        "name": "check",
+        "func": "\nmsg = await node.linkcall('custom - describe', msg);\n\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.hmi !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nmsg.filename = '/data/projects/' + msg.payload.project + '/package.json'\n\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': '',\n    'mdi': ''\n}\n\nglobal.set('describe', msg.payload, 'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "47f04f56e95961a5"
+            ]
+        ]
+    },
+    {
+        "id": "47f04f56e95961a5",
+        "type": "file in",
+        "z": "4c2feff02c9aebaa",
+        "g": "f734a4fcce4a0802",
+        "name": "read project",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 570,
+        "y": 80,
+        "wires": [
+            [
+                "def7f23476f92a9e"
+            ]
+        ]
+    },
+    {
+        "id": "def7f23476f92a9e",
+        "type": "json",
+        "z": "4c2feff02c9aebaa",
+        "g": "f734a4fcce4a0802",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 750,
+        "y": 80,
+        "wires": [
+            [
+                "34e54b81fe18b33f"
+            ]
+        ]
+    },
+    {
+        "id": "34e54b81fe18b33f",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "f734a4fcce4a0802",
+        "name": "app",
+        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', { }, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description.slice(5) || '',\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || '',\n        'mdi': 'bridge'\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'enabled': false\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 80,
+        "wires": [
+            [
+                "d0ee4b417bfa2bb7"
+            ]
+        ]
+    },
+    {
+        "id": "d0ee4b417bfa2bb7",
+        "type": "link out",
+        "z": "4c2feff02c9aebaa",
+        "g": "f734a4fcce4a0802",
+        "name": "common - boot",
+        "mode": "link",
+        "links": [
+            "05b0c0afa2f55df1",
+            "269fe06d582be842",
+            "33d0071b7ead7964",
+            "b0ebd3ad8d81c265",
+            "edd988e3b6005cfa"
+        ],
+        "x": 1035,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "31368f26faeeeec5",
+        "type": "http in",
+        "z": "4c2feff02c9aebaa",
+        "g": "87038dcf749d44c6",
+        "name": "",
+        "url": "/icon.png",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "066905a23ee18843"
+            ]
+        ]
+    },
+    {
+        "id": "066905a23ee18843",
+        "type": "change",
+        "z": "4c2feff02c9aebaa",
+        "g": "87038dcf749d44c6",
+        "name": "file",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "'/data/admin.png'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "9f90cc93644f80c4"
+            ]
+        ]
+    },
+    {
+        "id": "9f90cc93644f80c4",
+        "type": "file in",
+        "z": "4c2feff02c9aebaa",
+        "g": "87038dcf749d44c6",
+        "name": "icon",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "a49cdba72413a587"
+            ]
+        ]
+    },
+    {
+        "id": "a49cdba72413a587",
+        "type": "change",
+        "z": "4c2feff02c9aebaa",
+        "g": "87038dcf749d44c6",
+        "name": "response",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "200",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "buffersize",
+                "pt": "msg",
+                "to": "msg.payload.length",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\t    'Content-Type':'image/png',\t    'Content-Length':msg.buffersize,\t    'Connection':'close'\t}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "filename",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 200,
+        "wires": [
+            [
+                "9ba5455a5674c8a7"
+            ]
+        ]
+    },
+    {
+        "id": "9ba5455a5674c8a7",
+        "type": "http response",
+        "z": "4c2feff02c9aebaa",
+        "g": "87038dcf749d44c6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "05b0c0afa2f55df1",
+        "type": "link in",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "common - mqtt - settings",
+        "links": [
+            "d0ee4b417bfa2bb7",
+            "ca5c502dcbc1ee15"
+        ],
+        "x": 185,
+        "y": 440,
+        "wires": [
+            [
+                "b18dc51cbf75cc24",
+                "99def6db6b13ba9c"
+            ]
+        ]
+    },
+    {
+        "id": "b18dc51cbf75cc24",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "check",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        return msg;\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n}\n\nmsg.action = 'disconnect';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "4ca2b0783078bb87"
+            ]
+        ]
+    },
+    {
+        "id": "4ca2b0783078bb87",
+        "type": "mqtt out",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "mqtt",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2c5e094fee5ae877",
+        "x": 490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "99def6db6b13ba9c",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "check",
+        "func": "// Subscribe to DKNR discovery and values of all sources\n\nmsg.broker = {};\n\nconst mqtt = global.get('mqtt', 'default');\n\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(RED.util.cloneMessage(msg));\n\n        delete msg.broker;\n        msg.action = 'subscribe';\n        msg.payload = '';\n\n        // DKNR entities: topic / discovery / source / parent / entity\n        msg.topic = [mqtt.topic, 'discovery', '#'].join('/');\n        node.send(RED.util.cloneMessage(msg));\n\n        // DKNR values: topic / get / source / parent / entity\n        msg.topic = [mqtt.topic, 'get', '#'].join('/');\n        node.send(RED.util.cloneMessage(msg));\n\n    } else {\n        global.set('mqtt.enabled', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 440,
+        "wires": [
+            [
+                "30335bf1ac7b99bc"
+            ]
+        ]
+    },
+    {
+        "id": "30335bf1ac7b99bc",
+        "type": "mqtt in",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "mqtt in",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2c5e094fee5ae877",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "25ce94531dd6fbe4"
+            ]
+        ]
+    },
+    {
+        "id": "25ce94531dd6fbe4",
+        "type": "link out",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "common - mqtt - receive",
+        "mode": "link",
+        "links": [
+            "13d113e7ff87baa8"
+        ],
+        "x": 615,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d5bdaec879cbd196",
+        "type": "link in",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "common - mqtt - send",
+        "links": [
+            "01cd0716c5eaa97d"
+        ],
+        "x": 185,
+        "y": 560,
+        "wires": [
+            [
+                "02dccf8f780a61d9"
+            ]
+        ]
+    },
+    {
+        "id": "02dccf8f780a61d9",
+        "type": "switch",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "enabled",
+        "property": "mqtt.enabled",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "4ca2b0783078bb87",
+                "49a4236523d8a934"
+            ]
+        ]
+    },
+    {
+        "id": "49a4236523d8a934",
+        "type": "debug",
+        "z": "4c2feff02c9aebaa",
+        "g": "ced6b0d6d8aa764d",
+        "name": "common - mqtt",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fc147ee782462bbe",
+        "type": "link in",
+        "z": "4c2feff02c9aebaa",
+        "g": "6f2c0bf97f866aa6",
+        "name": "common - error",
+        "links": [],
+        "x": 185,
+        "y": 680,
+        "wires": [
+            [
+                "8b870d19217142fa"
+            ]
+        ]
+    },
+    {
+        "id": "8b870d19217142fa",
+        "type": "switch",
+        "z": "4c2feff02c9aebaa",
+        "g": "6f2c0bf97f866aa6",
+        "name": "empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "9f55bfd681e97786"
+            ]
+        ]
+    },
+    {
+        "id": "9f55bfd681e97786",
+        "type": "ui-notification",
+        "z": "4c2feff02c9aebaa",
+        "g": "6f2c0bf97f866aa6",
+        "ui": "df7710b4b2c4e55b",
+        "position": "top center",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "common - error",
+        "x": 500,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08a5cf610c97d769",
+        "type": "ui-template",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "group": "",
+        "page": "",
+        "ui": "df7710b4b2c4e55b",
+        "name": "common - ui - style",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}\n.nrdb-ui-gauge-tile-floating-label {\n    margin-top: -5px;\n    font-size: 0.75em !important;\n}\n.nrdb-ui-gauge-tile label:after {\n    content: '°C';\n}",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "site:style",
+        "className": "",
+        "x": 350,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7adf1bcdd6df3b31",
+        "type": "link in",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "common - ui - custom",
+        "links": [
+            "06a3852174fa19e7"
+        ],
+        "x": 185,
+        "y": 860,
+        "wires": [
+            [
+                "8760610a1e45ffab",
+                "0154b8f75648b065"
+            ]
+        ]
+    },
+    {
+        "id": "8760610a1e45ffab",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "tab",
+        "func": "if (msg.payload !== '' && typeof global.get('describe.hmi[\"' + msg.payload + '\"]', 'memoryOnly') === 'string') {\n    msg.tab = msg.payload;\n    msg.name = global.get('describe.hmi[\"' + msg.payload + '\"]', 'memoryOnly');\n    msg.payload = 'change';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 860,
+        "wires": [
+            [
+                "5f28408f430feddf"
+            ]
+        ]
+    },
+    {
+        "id": "5f28408f430feddf",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "action",
+        "func": "// on unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    return;\n}\n\n// on connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.app.hmi', 'memoryOnly');;\n\n    return [null, msg];\n}\n\n// ui main\nmsg.version = global.get('describe.app.version', 'memoryOnly');\nmsg.title = global.get('describe.app.title', 'memoryOnly');\nmsg.full = msg.title + ' v' + msg.version;\nmsg.git = \"https://github.com/dknr-domotic/\" + global.get('describe.app.git', 'memoryOnly');\nmsg.lang = 'FR-fr';\n\n// ui menu\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\nlet s =0;\nlet pages = global.get('describe.hmi', 'memoryOnly') || {};\nfor (const tab in pages) {\n    msg.menus[tab] = true;\n    msg.titles[tab] = pages[tab];\n    msg.payload.pages.show[s++] = tab;\n\n    if (tab === msg.tab) {\n        msg.title = msg.title + ' - ' + pages[tab];\n    }\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 920,
+        "wires": [
+            [
+                "3681864d9f417484",
+                "d3965b3ecbc6aae9"
+            ],
+            [
+                "0154b8f75648b065"
+            ]
+        ]
+    },
+    {
+        "id": "3681864d9f417484",
+        "type": "delay",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 920,
+        "wires": [
+            [
+                "ddab942f6d49a661"
+            ]
+        ]
+    },
+    {
+        "id": "ddab942f6d49a661",
+        "type": "link out",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "common - ui - control",
+        "mode": "link",
+        "links": [
+            "269fe06d582be842",
+            "b0ebd3ad8d81c265",
+            "edd988e3b6005cfa"
+        ],
+        "x": 1195,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "d3965b3ecbc6aae9",
+        "type": "link out",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "common - ui - custom",
+        "mode": "link",
+        "links": [
+            "05ee84a284c109d7"
+        ],
+        "x": 1035,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "300df28f3025dc33",
+        "type": "link in",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "common - ui - control",
+        "links": [],
+        "x": 185,
+        "y": 920,
+        "wires": [
+            [
+                "0154b8f75648b065"
+            ]
+        ]
+    },
+    {
+        "id": "0154b8f75648b065",
+        "type": "ui-control",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "common - ui - control",
+        "ui": "df7710b4b2c4e55b",
+        "events": "all",
+        "outputs": 1,
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "e453d1f77363ac46"
+            ]
+        ]
+    },
+    {
+        "id": "e453d1f77363ac46",
+        "type": "change",
+        "z": "4c2feff02c9aebaa",
+        "g": "94ca764ef2760841",
+        "name": "payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 920,
+        "wires": [
+            [
+                "8760610a1e45ffab"
+            ]
+        ]
+    },
+    {
+        "id": "269fe06d582be842",
+        "type": "link in",
+        "z": "4c2feff02c9aebaa",
+        "g": "9f3c5b4c8836214c",
+        "name": "common - mqtt - form",
+        "links": [
+            "d0ee4b417bfa2bb7",
+            "ddab942f6d49a661",
+            "ca5c502dcbc1ee15"
+        ],
+        "x": 185,
+        "y": 1040,
+        "wires": [
+            [
+                "913d3318a27c57f9"
+            ]
+        ]
+    },
+    {
+        "id": "913d3318a27c57f9",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "9f3c5b4c8836214c",
+        "name": "data",
+        "func": "msg.payload = { ...(global.get('describe.mqtt', 'memoryOnly') || { }), ...(global.get('mqtt', 'default') || { }) };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1040,
+        "wires": [
+            [
+                "8b76a374e82e1255"
+            ]
+        ]
+    },
+    {
+        "id": "8b76a374e82e1255",
+        "type": "ui-form",
+        "z": "4c2feff02c9aebaa",
+        "g": "9f3c5b4c8836214c",
+        "name": "ui - mqtt - form",
+        "group": "4c116fe2697e0aa9",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Adresse IP du broker",
+                "key": "host",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Port",
+                "key": "port",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Topic",
+                "key": "topic",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Utilisateur",
+                "key": "username",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Mot de passe",
+                "key": "password",
+                "type": "password",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Activation",
+                "key": "enabled",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "host": "",
+            "port": "",
+            "topic": "",
+            "username": "",
+            "password": "",
+            "enabled": false
+        },
+        "submit": "Enregistrer",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 500,
+        "y": 1040,
+        "wires": [
+            [
+                "094401b4b908ed63"
+            ]
+        ]
+    },
+    {
+        "id": "094401b4b908ed63",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "9f3c5b4c8836214c",
+        "name": "data",
+        "func": "global.set('mqtt', msg.payload, 'default');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1040,
+        "wires": [
+            [
+                "901bc3883a87d865"
+            ]
+        ]
+    },
+    {
+        "id": "901bc3883a87d865",
+        "type": "delay",
+        "z": "4c2feff02c9aebaa",
+        "g": "9f3c5b4c8836214c",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 1040,
+        "wires": [
+            [
+                "ca5c502dcbc1ee15"
+            ]
+        ]
+    },
+    {
+        "id": "ca5c502dcbc1ee15",
+        "type": "link out",
+        "z": "4c2feff02c9aebaa",
+        "g": "9f3c5b4c8836214c",
+        "name": "common - mqtt - form",
+        "mode": "link",
+        "links": [
+            "05b0c0afa2f55df1",
+            "269fe06d582be842"
+        ],
+        "x": 975,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9c1206c5da451f05",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - describe",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "560e6e002d024584",
+            "8ee6be07d7909e4c",
+            "35b24e0f76e5a94d"
+        ],
+        "x": 114,
+        "y": 39,
+        "w": 700,
+        "h": 82
+    },
+    {
+        "id": "7b701e2ac877f68b",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - menu",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "05ee84a284c109d7",
+            "f000685f71b06791",
+            "06a3852174fa19e7",
+            "646fb6195911ba44"
+        ],
+        "x": 114,
+        "y": 159,
+        "w": 700,
+        "h": 142
+    },
+    {
+        "id": "6c8a075a16eb0419",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - state",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "13d113e7ff87baa8",
+            "479fd7f898bf2afd",
+            "d12898380bab4ecf"
+        ],
+        "x": 114,
+        "y": 339,
+        "w": 700,
+        "h": 82
+    },
+    {
+        "id": "05089c94eae10a99",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - matter",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "33d0071b7ead7964",
+            "b64cd30029283d70",
+            "ca26314f1439c15f",
+            "d69c20fa05918568",
+            "01cd0716c5eaa97d",
+            "3fcbfa3a07c1e8aa",
+            "4817fc679731eab2"
+        ],
+        "x": 114,
+        "y": 459,
+        "w": 930,
+        "h": 202
+    },
+    {
+        "id": "2f8a9acf38c1108d",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - bridge",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "b0ebd3ad8d81c265",
+            "2378061c1c7ae48d",
+            "f5947f7803e8da42",
+            "54adde1a0aab7261",
+            "e6ce450a3f5dc66b",
+            "ae87ca76b7e1c8c2",
+            "a79e79e5f199afd5",
+            "6ea31f1fb40f5f1a"
+        ],
+        "x": 114,
+        "y": 699,
+        "w": 1160,
+        "h": 262
+    },
+    {
+        "id": "2ed8f7b04f4e6fcb",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - tests",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "edd988e3b6005cfa",
+            "2dd2a67ed91dbeb2",
+            "3a3672e7ff8d336a",
+            "67369c7c6ab41484",
+            "0f6b285f273cf8a3",
+            "aceec9ea820b4e49",
+            "1e65b97d22786c1f",
+            "24129fe41d65a6f4"
+        ],
+        "x": 114,
+        "y": 999,
+        "w": 1160,
+        "h": 202
+    },
+    {
+        "id": "df7710b4b2c4e55b",
+        "type": "ui-base",
+        "name": "Tableau de bord",
+        "path": "/dashboard",
+        "appIcon": "/icon.png",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "none",
+        "navigationStyle": "none",
+        "titleBarStyle": "hidden",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "877e716e64a22cf1",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "2c5e094fee5ae877",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "",
+        "port": "1883",
+        "clientid": "dkmatter",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "887b3087f3dda2eb",
+        "type": "ui-page",
+        "name": "mqtt",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/mqtt",
+        "icon": "cog",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "4c116fe2697e0aa9",
+        "type": "ui-group",
+        "name": "Configurer MQTT",
+        "page": "887b3087f3dda2eb",
+        "width": "3",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "71c85182a70747e0",
+        "type": "ui-page",
+        "name": "bridge",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/",
+        "icon": "bridge",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "98ca83880849596f",
+        "type": "ui-group",
+        "name": "Pont Matter",
+        "page": "71c85182a70747e0",
+        "width": "4",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false
+    },
+    {
+        "id": "76aa0f50ea2211f4",
+        "type": "ui-group",
+        "name": "Appairage",
+        "page": "71c85182a70747e0",
+        "width": "4",
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false
+    },
+    {
+        "id": "8a41940e2694e442",
+        "type": "ui-group",
+        "name": "Contrôleurs appairés",
+        "page": "71c85182a70747e0",
+        "width": "4",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false
+    },
+    {
+        "id": "f842aa0e1f6685f8",
+        "type": "ui-group",
+        "name": "Appareils de test",
+        "page": "71c85182a70747e0",
+        "width": "6",
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false
+    },
+    {
+        "id": "523ce0ffd567ef04",
+        "type": "ui-group",
+        "name": "Sources DKNR",
+        "page": "71c85182a70747e0",
+        "width": "6",
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false
+    },
+    {
+        "id": "560e6e002d024584",
+        "type": "link in",
+        "name": "custom - describe",
+        "links": [],
+        "wires": [
+            [
+                "8ee6be07d7909e4c"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "9c1206c5da451f05",
+        "x": 200,
+        "y": 80
+    },
+    {
+        "id": "8ee6be07d7909e4c",
+        "type": "function",
+        "name": "custom - describe",
+        "func": "\nmsg.payload.project = 'dknr-matter';\n\nmsg.payload.hmi = {\n    'bridge': 'Pont',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.matter = {\n    // DKNR device types (same names as dknr-alexa), see custom - matter for their Matter device types\n    'types': {\n        'switch': { 'label': 'Prise' },\n        'temperature': { 'label': 'Température' }\n    },\n    // value sent to a dimmer entity (number) on \"turn on\"\n    'dimmer_on': 99,\n    // seconds given to an entity to follow an order before its real state is written back\n    'confirm': 10,\n    // Matter state (identity, pairings): in the volume, never in the repository\n    'storage': env.get('DKNR_MATTER_STORAGE') || '/data/matter',\n    // network interface used for the discovery (mDNS), all if empty\n    'interface': env.get('DKNR_MATTER_INTERFACE') || '',\n    // matter.js log level: debug, info, notice, warn, error\n    'log': env.get('DKNR_MATTER_LOG') || 'notice',\n    // test vendor and product ids of the Matter specification\n    'vendor': 0xfff1,\n    'product': 0x8000,\n    // bridges by id: a device without bridge goes to \"main\"\n    // the id of a bridge must never change: it names its storage, so its pairings\n    'bridges': {\n        'main': { 'name': 'DKNR Matter', 'port': Number(env.get('DKNR_MATTER_PORT')) || 5540 }\n    },\n    // prototype: test devices set from the Pont page, before the Appareils page\n    'tests': {\n        'test-switch': { 'type': 'switch', 'name': 'Prise de test' },\n        'test-temperature': { 'type': 'temperature', 'name': 'Température de test' }\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "35b24e0f76e5a94d"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "9c1206c5da451f05",
+        "x": 430,
+        "y": 80
+    },
+    {
+        "id": "35b24e0f76e5a94d",
+        "type": "link out",
+        "name": "custom - describe",
+        "mode": "return",
+        "links": [],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "9c1206c5da451f05",
+        "x": 660,
+        "y": 80
+    },
+    {
+        "id": "05ee84a284c109d7",
+        "type": "link in",
+        "name": "custom - menu",
+        "links": [
+            "d3965b3ecbc6aae9"
+        ],
+        "wires": [
+            [
+                "f000685f71b06791"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "7b701e2ac877f68b",
+        "x": 200,
+        "y": 200
+    },
+    {
+        "id": "f000685f71b06791",
+        "type": "ui-template",
+        "group": "",
+        "page": "",
+        "ui": "df7710b4b2c4e55b",
+        "name": "custom - menu",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#oe_header\">\n        <v-toolbar class=\"oe_nav\"> \n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.bridge\" @click=\"oe_nav('bridge')\" :title=\"oe_titles.bridge\" icon=\"mdi-bridge\"></v-btn> \n            <v-btn v-if=\"oe_menus.mqtt\" @click=\"oe_nav('mqtt')\" :title=\"oe_titles.mqtt\" icon=\"mdi-cog\"></v-btn> \n        </v-btn-group>\n        <v-toolbar-title :text=\"msg.title\"></v-toolbar-title>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n        </v-toolbar>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: { bridge: true, mqtt: true },\n                oe_titles: { bridge: '', mqtt: '' },\n                mounted: false\n            }\n        },\n        mounted() {\n            let div = document.createElement(\"div\");\n            div.id=\"oe_header\";\n            const el = document.body.querySelector(\"#app\").prepend(div);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "wires": [
+            [
+                "06a3852174fa19e7"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "7b701e2ac877f68b",
+        "x": 430,
+        "y": 200
+    },
+    {
+        "id": "06a3852174fa19e7",
+        "type": "link out",
+        "name": "custom - menu",
+        "mode": "link",
+        "links": [
+            "7adf1bcdd6df3b31"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "7b701e2ac877f68b",
+        "x": 660,
+        "y": 200
+    },
+    {
+        "id": "646fb6195911ba44",
+        "type": "ui-template",
+        "group": "",
+        "page": "",
+        "ui": "df7710b4b2c4e55b",
+        "name": "custom - ui - style",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": ".dknr-headers .v-table__wrapper table thead {\n    display: table-header-group !important;\n}\n.dknr-headers tbody td {\n    font-weight: normal !important;\n}\n.dknr-pair {\n    padding: 8px 0;\n}\n.dknr-pair .dknr-qr {\n    width: 220px;\n    max-width: 100%;\n    margin: 12px 0 0 0;\n}\n.dknr-pair .dknr-code {\n    font-size: 1.6rem;\n    font-weight: bold;\n    letter-spacing: 0.1em;\n    color: #0094ce;\n    margin: 8px 0;\n}\n.dknr-pair .dknr-actions {\n    margin-top: 12px;\n}\n.dknr-pair .dknr-actions .v-btn {\n    margin: 8px 8px 0 0;\n}\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "site:style",
+        "className": "",
+        "wires": [
+            []
+        ],
+        "z": "48135a54600713e8",
+        "g": "7b701e2ac877f68b",
+        "x": 200,
+        "y": 260
+    },
+    {
+        "id": "13d113e7ff87baa8",
+        "type": "link in",
+        "name": "custom - state",
+        "links": [
+            "25ce94531dd6fbe4"
+        ],
+        "wires": [
+            [
+                "479fd7f898bf2afd"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "6c8a075a16eb0419",
+        "x": 200,
+        "y": 380
+    },
+    {
+        "id": "479fd7f898bf2afd",
+        "type": "function",
+        "name": "route",
+        "func": "\n// DKNR MQTT messages: entities catalog (discovery) and values (get)\n// output: value of an entity giving the state of a Matter device (action = value, topic = entity uid)\n\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst t = typeof msg.topic === 'string' ? msg.topic : '';\n\nif (topic === '' || !t.startsWith(topic + '/')) {\n\n    return;\n}\n\nconst path = t.slice(topic.length + 1).split('/');\nconst action = path.shift();\n\nlet catalog = global.get('catalog', 'memoryOnly');\nif (typeof catalog !== 'object' || catalog === null) {\n    catalog = { 'sources': {}, 'parents': {}, 'entities': {}, 'values': {} };\n    global.set('catalog', catalog, 'memoryOnly');\n}\n\n// empty retained message: removed\nconst empty = msg.payload === '' || msg.payload === null || (Buffer.isBuffer(msg.payload) && msg.payload.length === 0);\nconst object = typeof msg.payload === 'object' && msg.payload !== null && !Buffer.isBuffer(msg.payload);\n\nif (action === 'discovery') {\n    // source: topic / discovery / source\n    if (path.length === 1) {\n        if (empty) {\n            delete catalog.sources[path[0]];\n        } else {\n            catalog.sources[path[0]] = object && msg.payload.title ? String(msg.payload.title) : path[0];\n        }\n    }\n    // parent: topic / discovery / source / parent\n    else if (path.length === 2) {\n        const key = path.join('/');\n        if (empty) {\n            delete catalog.parents[key];\n        } else {\n            catalog.parents[key] = object && msg.payload.name ? String(msg.payload.name).replace(/_/g, ' ') : path[1];\n        }\n    }\n    // entity: topic / discovery / source / parent / entity\n    else if (path.length === 3) {\n        const uid = path.join('/');\n        if (empty) {\n            delete catalog.entities[uid];\n        } else if (object) {\n            catalog.entities[uid] = {\n                'name': String(msg.payload.name || path[2]),\n                'group': String(msg.payload.group || ''),\n                'type': String(msg.payload.type || ''),\n                'unit': String(msg.payload.unit || ''),\n                'options': typeof msg.payload.options === 'object' && msg.payload.options !== null ? msg.payload.options : {}\n            };\n            if (typeof catalog.sources[path[0]] !== 'string') {\n                catalog.sources[path[0]] = path[0];\n            }\n        }\n    }\n\n    return;\n}\n\n// value: topic / get / source / parent / entity\nif (action !== 'get' || path.length !== 3) {\n\n    return;\n}\n\nconst uid = path.join('/');\n// empty retained message: value removed by the source\nif (empty) {\n    delete catalog.values[uid];\n\n    return;\n}\nconst value = Buffer.isBuffer(msg.payload) ? msg.payload.toString() : msg.payload;\ncatalog.values[uid] = value;\n\n// entities giving the state of a Matter device: first entity of each active device\nconst devices = global.get('devices', 'default') || {};\nlet used = false;\nfor (const id in devices) {\n    const d = devices[id];\n    if (d.active === true && Array.isArray(d.entities) && d.entities[0] === uid) {\n        used = true;\n        break;\n    }\n}\nif (!used) {\n\n    return;\n}\n\n// last value kept across restarts: some sources do not retain their values (ex: RFXCom, Daikin)\nlet last = global.get('last', 'default') || {};\nif (last[uid] !== value) {\n    last[uid] = value;\n    global.set('last', last, 'default');\n}\n\nreturn {\n    'action': 'value',\n    'topic': uid,\n    'payload': value\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "d12898380bab4ecf"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "6c8a075a16eb0419",
+        "x": 430,
+        "y": 380
+    },
+    {
+        "id": "d12898380bab4ecf",
+        "type": "link out",
+        "name": "custom - state - matter",
+        "mode": "link",
+        "links": [
+            "ca26314f1439c15f"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "6c8a075a16eb0419",
+        "x": 660,
+        "y": 380
+    },
+    {
+        "id": "33d0071b7ead7964",
+        "type": "link in",
+        "name": "custom - matter - boot",
+        "links": [
+            "d0ee4b417bfa2bb7"
+        ],
+        "wires": [
+            [
+                "b64cd30029283d70"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 200,
+        "y": 500
+    },
+    {
+        "id": "b64cd30029283d70",
+        "type": "change",
+        "name": "start",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "start",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "wires": [
+            [
+                "d69c20fa05918568"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 430,
+        "y": 500
+    },
+    {
+        "id": "ca26314f1439c15f",
+        "type": "link in",
+        "name": "custom - matter",
+        "links": [
+            "d12898380bab4ecf",
+            "ae87ca76b7e1c8c2",
+            "1e65b97d22786c1f"
+        ],
+        "wires": [
+            [
+                "d69c20fa05918568"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 200,
+        "y": 560
+    },
+    {
+        "id": "d69c20fa05918568",
+        "type": "function",
+        "name": "bridges",
+        "func": "\n// Matter bridges: see the \"On Start\" tab for the engine\n// input: action = start | value (topic = entity uid) | sync | open | reset | retry\n// output 1: DKNR commands (MQTT) / output 2: status changed (refresh of the pages)\n\nconst engine = context.get('engine', 'memoryOnly');\n\nif (typeof engine !== 'object' || engine === null || typeof (engine.actions || {})[msg.action] !== 'function') {\n\n    return;\n}\n\nengine.push(() => engine.actions[msg.action](msg));\n\nreturn;\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "\n// Matter bridges engine (matter.js), created when the flow starts and closed when it stops\n// libs: matter (@matter/main), devices (@matter/main/devices), endpoints (@matter/main/endpoints),\n//       behaviors (@matter/main/behaviors), mtypes (@matter/main/types), dgram\n// output 1: DKNR commands (MQTT) / output 2: status changed (refresh of the pages)\n//\n// A bridge is a Matter node (ServerNode) with its own pairing, port and storage. It holds an\n// aggregator endpoint and one bridged endpoint per DKNR device. Bridges are kept by id: only\n// the bridge \"main\" exists today, a device without bridge goes to it.\n\nconst BOOL_ON = [true, 1, '1', 'true', 'ON', 'on', 'On'];\n\n// DKNR device types to Matter device types\n//   device: Matter device type\n//   state: DKNR value to Matter attributes (null if the value is not usable)\n//   listen: call order(context, asked) when an attribute changes, returns the function removing the listener\n//   command: asked state to DKNR value of an entity (undefined: nothing to send)\nconst types = {\n    'switch': {\n        'device': devices.OnOffPlugInUnitDevice,\n        'state': (def, value) => {\n            if (def.type === 'number') {\n                const num = Number.parseFloat(value);\n\n                return isNaN(num) ? null : { 'onOff': { 'onOff': num > 0 } };\n            }\n\n            return { 'onOff': { 'onOff': BOOL_ON.includes(value) !== (def.unit === 'rb') } };\n        },\n        'listen': (endpoint, order) => {\n            const handler = (value, old, context) => order(context, { 'onOff': { 'onOff': value === true } });\n            endpoint.events.onOff.onOff$Changed.on(handler);\n\n            return () => endpoint.events.onOff.onOff$Changed.off(handler);\n        },\n        'command': (def, asked, current, cfg) => {\n            const on = asked.onOff.onOff;\n            if (def.type === 'number') {\n                // dimmer: keep its level if already on\n                if (on && Number.parseFloat(current) > 0) {\n\n                    return undefined;\n                }\n\n                return on ? (cfg.dimmer_on || 99) : 0;\n            }\n\n            return on !== (def.unit === 'rb') ? 1 : 0;\n        }\n    },\n    'temperature': {\n        'device': devices.TemperatureSensorDevice,\n        'state': (def, value) => {\n            const num = Number.parseFloat(value);\n\n            // Matter: hundredths of °C\n            return isNaN(num) ? null : { 'temperatureMeasurement': { 'measuredValue': Math.round(num * 100) } };\n        }\n    }\n};\n\nconst engine = {\n    'bridges': {},\n    'queue': Promise.resolve(),\n    'closed': false\n};\n\nconst config = () => global.get('describe.matter', 'memoryOnly') || {};\nconst allDevices = () => global.get('devices', 'default') || {};\nconst catalog = () => global.get('catalog', 'memoryOnly') || { 'entities': {}, 'values': {} };\n\n// one action at a time\nengine.push = function (task) {\n    engine.queue = engine.queue.then(task).catch(e => node.error('matter: ' + (e && e.message ? e.message : e)));\n\n    return engine.queue;\n};\n\n// devices published by a bridge\nfunction wanted(bridge) {\n    const all = allDevices();\n    let list = {};\n    for (const id in all) {\n        const d = all[id];\n        if (typeof d === 'object' && d !== null && d.active === true && Array.isArray(d.entities) && d.entities.length > 0\n            && typeof types[d.type] === 'object' && (d.bridge || 'main') === bridge.id\n        ) {\n            list[id] = d;\n        }\n    }\n\n    return list;\n}\n\n// value of an entity: current one, or the last one known before restart (sources not retaining their values)\nfunction valueOf(uid) {\n    const values = catalog().values || {};\n    if (values[uid] !== undefined) {\n\n        return values[uid];\n    }\n\n    return (global.get('last', 'default') || {})[uid];\n}\n\n// QR code of a pairing code as a SVG image (matter.js draws it with block characters, two modules per character)\nfunction qrSvg(text) {\n    const lines = mtypes.QrCode.get(text).split('\\n').filter(l => l.trim() !== '');\n    const width = Math.max(...lines.map(l => [...l].length));\n    const height = lines.length * 2;\n    let path = '';\n    lines.forEach((line, row) => {\n        const chars = [...line];\n        for (let x = 0; x < width; x++) {\n            const c = chars[x] || ' ';\n            const dark = [c !== '█' && c !== '▀', c !== '█' && c !== '▄'];\n            for (let half = 0; half < 2; half++) {\n                const y = row * 2 + half;\n                // first and last half lines are outside the code\n                if (dark[half] && y > 0 && y < height - 1) {\n                    path += 'M' + x + ' ' + y + 'h1v1h-1z';\n                }\n            }\n        }\n    });\n\n    return '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-3 -2 ' + (width + 6) + ' ' + (height + 4) + '\" shape-rendering=\"crispEdges\">'\n        + '<rect x=\"-3\" y=\"-2\" width=\"' + (width + 6) + '\" height=\"' + (height + 4) + '\" fill=\"#ffffff\"/>'\n        + '<path fill=\"#000000\" d=\"' + path + '\"/></svg>';\n}\n\n// status of the bridges for the pages (plain data)\nfunction publish() {\n    let status = {};\n    let texts = [];\n    for (const id in engine.bridges) {\n        const b = engine.bridges[id];\n        let s = { 'id': id, 'status': b.status, 'error': b.error || '', 'port': b.port, 'devices': Object.keys(b.endpoints).length, 'commissioned': false, 'fabrics': [], 'manual': '', 'qr': '', 'window': b.window || 0 };\n        if (b.server && b.status === 'online') {\n            try {\n                const c = b.server.state.commissioning;\n                s.commissioned = c.commissioned === true;\n                s.manual = c.pairingCodes.manualPairingCode;\n                s.qr = c.pairingCodes.qrPairingCode;\n                s.svg = qrSvg(s.qr);\n                s.fabrics = Object.values(c.fabrics || {}).map(f => ({\n                    'index': Number(f.fabricIndex),\n                    'vendor': Number(f.rootVendorId),\n                    'label': String(f.label || '')\n                }));\n            } catch (e) {\n                s.error = e.message;\n            }\n        }\n        status[id] = s;\n        texts.push(id + ': ' + s.status + ' (' + s.devices + ')');\n    }\n    global.set('matter', status, 'memoryOnly');\n    node.status({\n        'fill': Object.values(status).every(s => s.status === 'online') ? 'green' : 'red',\n        'shape': 'dot',\n        'text': texts.join(', ') || 'no bridge'\n    });\n    node.send([null, { 'topic': 'status' }]);\n}\n\n// matter.js binds its sockets in the background: a failure there stops Node-RED,\n// so the port and IPv6 are checked before\nfunction check(port) {\n    const bind = type => new Promise(resolve => {\n        const socket = dgram.createSocket({ 'type': type, 'ipv6Only': type === 'udp6' });\n        socket.once('error', e => {\n            try { socket.close(); } catch (e2) { }\n            resolve(e.code || e.message);\n        });\n        socket.bind(port, () => socket.close(() => resolve('')));\n    });\n\n    return bind('udp6').then(e6 => {\n        if (e6 !== '') {\n\n            return e6 === 'EADDRINUSE' ? 'port UDP ' + port + ' déjà utilisé' : 'IPv6 indisponible (' + e6 + ')';\n        }\n\n        return bind('udp4').then(e4 => e4 === '' ? '' : (e4 === 'EADDRINUSE' ? 'port UDP ' + port + ' déjà utilisé' : 'port UDP ' + port + ' indisponible (' + e4 + ')'));\n    });\n}\n\n// DKNR value to Matter attributes of a device\nasync function apply(bridge, id, force) {\n    const item = bridge.endpoints[id];\n    const dev = allDevices()[id];\n    if (!item || typeof dev !== 'object' || dev === null) {\n\n        return;\n    }\n    // state comes from the first entity of the device\n    const uid = dev.entities[0];\n    const value = valueOf(uid);\n    if (value === undefined) {\n\n        return;\n    }\n    const state = types[item.type].state((catalog().entities || {})[uid] || {}, value);\n    if (state === null) {\n\n        return;\n    }\n    const key = JSON.stringify(state);\n    if (!force && item.key === key) {\n\n        return;\n    }\n    item.key = key;\n    await item.endpoint.set(state);\n}\n\n// order of a controller to DKNR commands, one per entity of the device\nfunction order(bridge, id, context, asked) {\n    // change written by this engine (DKNR value), not by a controller\n    if (engine.closed || !context || context.offline === true) {\n\n        return;\n    }\n    const item = bridge.endpoints[id];\n    const dev = allDevices()[id];\n    const topic = global.get('mqtt.topic', 'default') || '';\n    const cfg = config();\n    if (!item || typeof dev !== 'object' || dev === null || typeof types[item.type].command !== 'function') {\n\n        return;\n    }\n\n    let out = [];\n    for (const uid of dev.entities || []) {\n        const value = types[item.type].command((catalog().entities || {})[uid] || {}, asked, valueOf(uid), cfg);\n        if (value === undefined || topic === '') {\n            continue;\n        }\n        out.push({\n            'topic': [topic, 'set', uid].join('/'),\n            'payload': String(value),\n            'qos': 0,\n            'retain': false\n        });\n    }\n\n    // the controller already knows the asked state. If the entity does not follow,\n    // its real state is written back after a delay\n    item.key = JSON.stringify(asked);\n    clearTimeout(item.timer);\n    item.timer = setTimeout(() => {\n        engine.push(() => engine.closed ? null : apply(bridge, id, true));\n    }, (cfg.confirm || 10) * 1000);\n\n    if (out.length > 0) {\n        node.send([out, null]);\n    }\n}\n\n// add, rename and remove the endpoints of a bridge from the devices\nasync function sync(bridge) {\n    const list = wanted(bridge);\n    let changed = false;\n\n    for (const id in bridge.endpoints) {\n        const item = bridge.endpoints[id];\n        if (typeof list[id] !== 'object' || list[id].type !== item.type) {\n            clearTimeout(item.timer);\n            if (item.off) {\n                item.off();\n            }\n            // delete: the endpoint number is not used again, controllers forget the device\n            await item.endpoint.delete();\n            delete bridge.endpoints[id];\n            changed = true;\n        }\n    }\n\n    for (const id in list) {\n        const dev = list[id];\n        const label = String(dev.name || id).slice(0, 32);\n        let item = bridge.endpoints[id];\n        if (!item) {\n            const type = types[dev.type];\n            // the endpoint id gives a stable endpoint number: changing it creates a new device on controllers\n            const endpoint = new matter.Endpoint(type.device.with(behaviors.BridgedDeviceBasicInformationServer), {\n                'id': id,\n                'bridgedDeviceBasicInformation': {\n                    'nodeLabel': label,\n                    'productName': label,\n                    'vendorName': 'DKNR',\n                    'serialNumber': id.slice(0, 32),\n                    'reachable': true\n                }\n            });\n            await bridge.aggregator.add(endpoint);\n            item = { 'endpoint': endpoint, 'type': dev.type, 'label': label, 'key': null, 'timer': null, 'off': null };\n            if (typeof type.listen === 'function') {\n                item.off = type.listen(endpoint, (context, asked) => order(bridge, id, context, asked));\n            }\n            bridge.endpoints[id] = item;\n            changed = true;\n        } else if (item.label !== label) {\n            await item.endpoint.set({ 'bridgedDeviceBasicInformation': { 'nodeLabel': label } });\n            item.label = label;\n            changed = true;\n        }\n        await apply(bridge, id, false);\n    }\n\n    return changed;\n}\n\nasync function start(id) {\n    const cfg = config();\n    const def = (cfg.bridges || {})[id];\n    if (typeof def !== 'object' || engine.bridges[id]) {\n\n        return;\n    }\n    const bridge = { 'id': id, 'port': def.port, 'status': 'starting', 'error': '', 'server': null, 'aggregator': null, 'endpoints': {}, 'offs': [], 'window': 0 };\n    engine.bridges[id] = bridge;\n\n    try {\n        // previous engine (redeploy): wait for its sockets and storage to be closed\n        const closing = global.get('matter_closing', 'memoryOnly');\n        if (closing && typeof closing.then === 'function') {\n            await closing;\n        }\n\n        const problem = await check(bridge.port);\n        if (problem !== '') {\n            throw new Error(problem);\n        }\n\n        // matter.js must not handle the signals nor the exit code of Node-RED\n        const env = matter.Environment.default;\n        env.vars.set('runtime.signals', false);\n        env.vars.set('runtime.exitcode', false);\n        env.vars.set('storage.path', cfg.storage);\n        env.vars.set('log.level', cfg.log || 'notice');\n        env.vars.set('log.format', 'plain');\n        if (cfg.interface) {\n            env.vars.set('mdns.networkInterface', cfg.interface);\n        }\n\n        bridge.server = await matter.ServerNode.create({\n            'id': id,\n            'network': { 'port': bridge.port },\n            'productDescription': { 'name': def.name, 'deviceType': endpoints.AggregatorEndpoint.deviceType },\n            'basicInformation': {\n                'vendorName': 'DKNR',\n                'vendorId': matter.VendorId(cfg.vendor),\n                'productName': 'DKNR Matter',\n                'productId': cfg.product,\n                'nodeLabel': def.name,\n                'hardwareVersion': 1,\n                'hardwareVersionString': '1',\n                'softwareVersion': 1,\n                'softwareVersionString': String(global.get('describe.app.version', 'memoryOnly') || '1')\n            }\n        });\n        bridge.aggregator = new matter.Endpoint(endpoints.AggregatorEndpoint, { 'id': 'aggregator' });\n        await bridge.server.add(bridge.aggregator);\n        await sync(bridge);\n        await bridge.server.start();\n\n        const changed = () => {\n            bridge.window = 0;\n            publish();\n        };\n        const events = bridge.server.events.commissioning;\n        for (const name of ['commissioned', 'decommissioned', 'fabricsChanged']) {\n            events[name].on(changed);\n            bridge.offs.push(() => events[name].off(changed));\n        }\n        bridge.status = 'online';\n    } catch (e) {\n        bridge.status = 'error';\n        bridge.error = e && e.message ? e.message : String(e);\n        node.error('matter: bridge ' + id + ': ' + bridge.error);\n        if (bridge.server) {\n            try { await bridge.server.close(); } catch (e2) { }\n            bridge.server = null;\n        }\n    }\n    publish();\n}\n\nasync function stop(id) {\n    const bridge = engine.bridges[id];\n    if (!bridge) {\n\n        return;\n    }\n    for (const off of bridge.offs) {\n        off();\n    }\n    for (const eid in bridge.endpoints) {\n        clearTimeout(bridge.endpoints[eid].timer);\n        if (bridge.endpoints[eid].off) {\n            bridge.endpoints[eid].off();\n        }\n    }\n    if (bridge.server) {\n        try { await bridge.server.close(); } catch (e) { }\n    }\n    delete engine.bridges[id];\n}\n\n// actions (msg.action)\nengine.actions = {\n    // start the bridges (boot)\n    'start': async () => {\n        for (const id in config().bridges || {}) {\n            await start(id);\n        }\n    },\n    // DKNR value of an entity (msg.topic = entity uid)\n    'value': async msg => {\n        const all = allDevices();\n        for (const id in engine.bridges) {\n            const bridge = engine.bridges[id];\n            if (bridge.status !== 'online') {\n                continue;\n            }\n            for (const eid in bridge.endpoints) {\n                if (typeof all[eid] === 'object' && all[eid].entities[0] === msg.topic) {\n                    await apply(bridge, eid, false);\n                }\n            }\n        }\n    },\n    // devices changed\n    'sync': async () => {\n        let changed = false;\n        for (const id in engine.bridges) {\n            if (engine.bridges[id].status === 'online') {\n                changed = await sync(engine.bridges[id]) || changed;\n            }\n        }\n        if (changed) {\n            publish();\n        }\n    },\n    // open the pairing of a bridge already paired, for another controller (msg.bridge)\n    'open': async msg => {\n        const bridge = engine.bridges[msg.bridge || 'main'];\n        if (!bridge || bridge.status !== 'online') {\n\n            return;\n        }\n        await bridge.server.act(agent => agent.commissioning.enterCommissionableMode());\n        bridge.window = Date.now() + 15 * 60000;\n        publish();\n    },\n    // forget all the controllers of a bridge (msg.bridge): new pairing codes\n    'reset': async msg => {\n        const id = msg.bridge || 'main';\n        const bridge = engine.bridges[id];\n        if (!bridge) {\n\n            return;\n        }\n        if (bridge.server) {\n            await bridge.server.erase();\n        }\n        await stop(id);\n        await start(id);\n    },\n    // try again a bridge in error (msg.bridge)\n    'retry': async msg => {\n        const id = msg.bridge || 'main';\n        if (engine.bridges[id] && engine.bridges[id].status === 'online') {\n\n            return;\n        }\n        await stop(id);\n        await start(id);\n    }\n};\n\nengine.close = function () {\n    engine.closed = true;\n\n    return engine.push(async () => {\n        for (const id of Object.keys(engine.bridges)) {\n            await stop(id);\n        }\n    });\n};\n\ncontext.set('engine', engine, 'memoryOnly');\nnode.status({ 'fill': 'grey', 'shape': 'dot', 'text': 'waiting' });\n",
+        "finalize": "// close the bridges, the next engine waits for it (see \"On Start\")\nconst engine = context.get('engine', 'memoryOnly');\nif (typeof engine === 'object' && engine !== null && typeof engine.close === 'function') {\n    global.set('matter_closing', engine.close(), 'memoryOnly');\n}\n",
+        "libs": [
+            {
+                "var": "matter",
+                "module": "@matter/main"
+            },
+            {
+                "var": "devices",
+                "module": "@matter/main/devices"
+            },
+            {
+                "var": "endpoints",
+                "module": "@matter/main/endpoints"
+            },
+            {
+                "var": "behaviors",
+                "module": "@matter/main/behaviors"
+            },
+            {
+                "var": "mtypes",
+                "module": "@matter/main/types"
+            },
+            {
+                "var": "dgram",
+                "module": "dgram"
+            }
+        ],
+        "wires": [
+            [
+                "01cd0716c5eaa97d",
+                "3fcbfa3a07c1e8aa"
+            ],
+            [
+                "4817fc679731eab2"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 660,
+        "y": 500
+    },
+    {
+        "id": "01cd0716c5eaa97d",
+        "type": "link out",
+        "name": "custom - matter - mqtt",
+        "mode": "link",
+        "links": [
+            "d5bdaec879cbd196"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 890,
+        "y": 500
+    },
+    {
+        "id": "3fcbfa3a07c1e8aa",
+        "type": "debug",
+        "name": "custom - matter",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 890,
+        "y": 560
+    },
+    {
+        "id": "4817fc679731eab2",
+        "type": "link out",
+        "name": "custom - matter - status",
+        "mode": "link",
+        "links": [
+            "b0ebd3ad8d81c265",
+            "edd988e3b6005cfa"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "05089c94eae10a99",
+        "x": 890,
+        "y": 620
+    },
+    {
+        "id": "b0ebd3ad8d81c265",
+        "type": "link in",
+        "name": "custom - bridge",
+        "links": [
+            "d0ee4b417bfa2bb7",
+            "ddab942f6d49a661",
+            "4817fc679731eab2",
+            "24129fe41d65a6f4"
+        ],
+        "wires": [
+            [
+                "2378061c1c7ae48d"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 200,
+        "y": 740
+    },
+    {
+        "id": "2378061c1c7ae48d",
+        "type": "function",
+        "name": "bridge",
+        "func": "\n// Pont page: state of the Matter bridge, pairing, paired controllers and DKNR sources\n// output 1: state table / output 2: pairing panel / output 3: controllers table / output 4: sources table\n\nconst cfg = global.get('describe.matter', 'memoryOnly') || {};\nconst status = (global.get('matter', 'memoryOnly') || {}).main || { 'status': 'starting' };\nconst devices = global.get('devices', 'default') || {};\nconst catalog = global.get('catalog', 'memoryOnly') || { 'sources': {}, 'parents': {}, 'entities': {} };\n\n// Matter vendor ids of the usual controllers\nconst vendors = {\n    0x1217: 'Amazon Alexa',\n    0x1349: 'Apple Maison',\n    0x1384: 'Apple (trousseau)',\n    0x6006: 'Google Home',\n    0x110a: 'Samsung SmartThings',\n    0x134b: 'Home Assistant'\n};\n\nconst texts = {\n    'starting': 'Démarrage...',\n    'online': 'En ligne',\n    'error': 'Erreur'\n};\n\nconst time = t => new Date(t).toLocaleTimeString('fr-FR', { 'timeZone': env.get('TZ') || 'Europe/Paris', 'hour': '2-digit', 'minute': '2-digit' });\n\nlet rows = [];\nconst add = (lbl, val) => {\n    if (val !== undefined && val !== null && val !== '') {\n        rows.push({ 'lbl': lbl, 'val': String(val) });\n    }\n};\nconst fabrics = Array.isArray(status.fabrics) ? status.fabrics : [];\nconst open = status.status === 'online' && (status.commissioned !== true || status.window > Date.now());\n\nadd('Etat', (texts[status.status] || status.status) + (status.error ? ' : ' + status.error : ''));\nadd('Port UDP', status.port);\nadd('Interface réseau', cfg.interface || 'toutes');\nadd('Appareils publiés', status.devices === undefined ? '' : status.devices + ' / ' + Object.keys(devices).length);\nadd('Contrôleurs appairés', status.status === 'online' ? fabrics.length : '');\nadd('Appairage', status.status !== 'online' ? '' : (status.commissioned !== true ? 'en attente du premier contrôleur' : (open ? 'ouvert jusqu\\'à ' + time(status.window) : 'fermé')));\n\n// manual pairing code: 0000-000-0000\nconst code = String(status.manual || '').replace(/^(\\d{4})(\\d{3})(\\d{4})$/, '$1-$2-$3');\n\nconst controllers = fabrics.map(f => ({\n    'name': vendors[f.vendor] || 'Fabricant 0x' + Number(f.vendor).toString(16).toUpperCase().padStart(4, '0'),\n    'label': f.label || '-',\n    'index': f.index\n}));\n\n// DKNR sources\nlet used = {};\nfor (const d of Object.values(devices)) {\n    for (const uid of d.entities || []) {\n        used[uid] = true;\n    }\n}\nlet sources = {};\nfor (const s in catalog.sources) {\n    sources[s] = { 'source': catalog.sources[s] + (catalog.sources[s] !== s ? ' (' + s + ')' : ''), 'parents': 0, 'entities': 0, 'used': 0 };\n}\nfor (const p in catalog.parents) {\n    const s = p.split('/')[0];\n    if (sources[s]) {\n        sources[s].parents++;\n    }\n}\nfor (const uid in catalog.entities) {\n    const s = uid.split('/')[0];\n    if (sources[s]) {\n        sources[s].entities++;\n        if (used[uid]) {\n            sources[s].used++;\n        }\n    }\n}\n\nreturn [\n    { 'payload': rows },\n    {\n        'payload': {\n            'status': status.status || 'starting',\n            'open': open,\n            'commissioned': status.commissioned === true,\n            'svg': open ? status.svg || '' : '',\n            'code': open ? code : '',\n            'controllers': fabrics.length\n        }\n    },\n    { 'payload': controllers },\n    { 'payload': Object.keys(sources).sort().map(s => sources[s]) }\n];\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "f5947f7803e8da42"
+            ],
+            [
+                "54adde1a0aab7261"
+            ],
+            [
+                "a79e79e5f199afd5"
+            ],
+            [
+                "6ea31f1fb40f5f1a"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 430,
+        "y": 740
+    },
+    {
+        "id": "f5947f7803e8da42",
+        "type": "ui-table",
+        "group": "98ca83880849596f",
+        "name": "custom - bridge - state",
+        "label": "",
+        "order": 1,
+        "width": "4",
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "",
+                "key": "lbl",
+                "keyType": "key",
+                "type": "text",
+                "width": "45%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "val",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "wires": [
+            []
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 660,
+        "y": 740
+    },
+    {
+        "id": "54adde1a0aab7261",
+        "type": "ui-template",
+        "group": "76aa0f50ea2211f4",
+        "page": "",
+        "ui": "",
+        "name": "custom - bridge - pairing",
+        "order": 1,
+        "width": "4",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n    <div v-if=\"msg && msg.payload\" class=\"dknr-pair\">\n        <div v-if=\"msg.payload.open\">\n            <div>Dans l'application du contrôleur (Alexa, Home Assistant, Apple Maison, Google Home...), ajoutez un appareil Matter puis scannez ce QR code ou saisissez le code :</div>\n            <div class=\"dknr-qr\" v-html=\"msg.payload.svg\"></div>\n            <div class=\"dknr-code\">{{ msg.payload.code }}</div>\n        </div>\n        <div v-else-if=\"msg.payload.status === 'online'\">Le pont est appairé. Pour ajouter un autre contrôleur, ouvrez l'appairage : le QR code est alors valable 15 minutes.</div>\n        <div v-else-if=\"msg.payload.status === 'error'\">Le pont n'a pas démarré : voir l'état.</div>\n        <div v-else>Démarrage du pont...</div>\n        <div class=\"dknr-actions\" v-if=\"!confirm\">\n            <v-btn v-if=\"msg.payload.status === 'online' && msg.payload.commissioned && !msg.payload.open\" variant=\"outlined\" prepend-icon=\"mdi-qrcode\" @click=\"send({ 'topic': 'open', 'payload': 'open' })\">Ouvrir l'appairage</v-btn>\n            <v-btn v-if=\"msg.payload.status === 'error'\" variant=\"outlined\" prepend-icon=\"mdi-refresh\" @click=\"send({ 'topic': 'retry', 'payload': 'retry' })\">Réessayer</v-btn>\n            <v-btn v-if=\"msg.payload.status === 'online' && msg.payload.commissioned\" variant=\"outlined\" prepend-icon=\"mdi-link-off\" @click=\"confirm = true\">Réinitialiser l'appairage</v-btn>\n        </div>\n        <div class=\"dknr-actions\" v-else>\n            <div>Tous les contrôleurs seront oubliés et les appareils devront être ajoutés à nouveau dans chacun d'eux.</div>\n            <v-btn variant=\"outlined\" color=\"error\" prepend-icon=\"mdi-link-off\" @click=\"confirm = false; send({ 'topic': 'reset', 'payload': 'reset' })\">Confirmer</v-btn>\n            <v-btn variant=\"outlined\" prepend-icon=\"mdi-close\" @click=\"confirm = false\">Annuler</v-btn>\n        </div>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                confirm: false\n            }\n        }\n    }\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "wires": [
+            [
+                "e6ce450a3f5dc66b"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 660,
+        "y": 800
+    },
+    {
+        "id": "e6ce450a3f5dc66b",
+        "type": "function",
+        "name": "action",
+        "func": "\n// action asked from the pairing panel: open, reset or retry\n\nif (!['open', 'reset', 'retry'].includes(msg.topic)) {\n\n    return;\n}\n\nreturn { 'action': msg.topic, 'bridge': 'main' };\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "ae87ca76b7e1c8c2"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 890,
+        "y": 740
+    },
+    {
+        "id": "ae87ca76b7e1c8c2",
+        "type": "link out",
+        "name": "custom - bridge - action",
+        "mode": "link",
+        "links": [
+            "ca26314f1439c15f"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 1120,
+        "y": 740
+    },
+    {
+        "id": "a79e79e5f199afd5",
+        "type": "ui-table",
+        "group": "8a41940e2694e442",
+        "name": "custom - bridge - controllers",
+        "label": "",
+        "order": 1,
+        "width": "4",
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "Contrôleur",
+                "key": "name",
+                "keyType": "key",
+                "type": "text",
+                "width": "55%",
+                "align": "start"
+            },
+            {
+                "title": "Nom",
+                "key": "label",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "dknr-headers",
+        "wires": [
+            []
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 660,
+        "y": 860
+    },
+    {
+        "id": "6ea31f1fb40f5f1a",
+        "type": "ui-table",
+        "group": "523ce0ffd567ef04",
+        "name": "custom - bridge - sources",
+        "label": "",
+        "order": 1,
+        "width": "6",
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "Source",
+                "key": "source",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Appareils",
+                "key": "parents",
+                "keyType": "key",
+                "type": "text",
+                "width": "18%",
+                "align": "start"
+            },
+            {
+                "title": "Entités",
+                "key": "entities",
+                "keyType": "key",
+                "type": "text",
+                "width": "18%",
+                "align": "start"
+            },
+            {
+                "title": "Utilisées",
+                "key": "used",
+                "keyType": "key",
+                "type": "text",
+                "width": "18%",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "dknr-headers",
+        "wires": [
+            []
+        ],
+        "z": "48135a54600713e8",
+        "g": "2f8a9acf38c1108d",
+        "x": 660,
+        "y": 920
+    },
+    {
+        "id": "edd988e3b6005cfa",
+        "type": "link in",
+        "name": "custom - tests",
+        "links": [
+            "d0ee4b417bfa2bb7",
+            "ddab942f6d49a661",
+            "4817fc679731eab2",
+            "24129fe41d65a6f4"
+        ],
+        "wires": [
+            [
+                "2dd2a67ed91dbeb2"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 200,
+        "y": 1040
+    },
+    {
+        "id": "2dd2a67ed91dbeb2",
+        "type": "function",
+        "name": "tests",
+        "func": "\n// Prototype: test devices of the Pont page, before the Appareils page\n// output 1: entities of the test plug / output 2: entities of the test temperature / output 3: values table\n\nconst cfg = global.get('describe.matter', 'memoryOnly') || {};\nconst devices = global.get('devices', 'default') || {};\nconst catalog = global.get('catalog', 'memoryOnly') || { 'sources': {}, 'parents': {}, 'entities': {}, 'values': {} };\nconst last = global.get('last', 'default') || {};\n\n// entities usable by a device type\nfunction options(type, current) {\n    let list = [];\n    for (const uid in catalog.entities) {\n        const def = catalog.entities[uid];\n        const ok = type === 'switch'\n            ? def.type === 'binary' || (def.type === 'number' && def.unit === '%')\n            : def.type === 'number' && def.unit.indexOf('°') !== -1;\n        if (ok || uid === current) {\n            const parent = uid.split('/').slice(0, 2).join('/');\n            list.push({ 'label': (catalog.parents[parent] || parent) + ' - ' + def.name + ' (' + uid + ')', 'value': uid });\n        }\n    }\n    // entity not received yet (source stopped, MQTT not configured)\n    if (current !== '' && typeof catalog.entities[current] !== 'object') {\n        list.push({ 'label': current, 'value': current });\n    }\n    list.sort((a, b) => a.label.localeCompare(b.label));\n    list.unshift({ 'label': 'Aucune', 'value': '' });\n\n    return list;\n}\n\nlet out = [];\nlet rows = [];\nfor (const id in cfg.tests || {}) {\n    const d = devices[id];\n    const current = typeof d === 'object' && Array.isArray(d.entities) && d.entities.length > 0 ? d.entities[0] : '';\n    out.push({ 'payload': current, 'ui_update': { 'options': options(cfg.tests[id].type, current) } });\n    if (current !== '') {\n        const value = catalog.values[current] !== undefined ? catalog.values[current] : last[current];\n        const unit = (catalog.entities[current] || {}).unit || '';\n        rows.push({ 'lbl': cfg.tests[id].name, 'val': value === undefined ? 'aucune valeur reçue' : String(value) + (unit && unit !== 'rb' ? ' ' + unit : '') });\n    }\n}\nout.push({ 'payload': rows });\n\nreturn out;\n",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "3a3672e7ff8d336a"
+            ],
+            [
+                "67369c7c6ab41484"
+            ],
+            [
+                "0f6b285f273cf8a3"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 430,
+        "y": 1040
+    },
+    {
+        "id": "3a3672e7ff8d336a",
+        "type": "ui-dropdown",
+        "group": "f842aa0e1f6685f8",
+        "name": "custom - tests - switch",
+        "label": "Prise de test",
+        "tooltip": "",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "test-switch",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "wires": [
+            [
+                "aceec9ea820b4e49"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 660,
+        "y": 1040
+    },
+    {
+        "id": "67369c7c6ab41484",
+        "type": "ui-dropdown",
+        "group": "f842aa0e1f6685f8",
+        "name": "custom - tests - temperature",
+        "label": "Température de test",
+        "tooltip": "",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "test-temperature",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "wires": [
+            [
+                "aceec9ea820b4e49"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 660,
+        "y": 1100
+    },
+    {
+        "id": "0f6b285f273cf8a3",
+        "type": "ui-table",
+        "group": "f842aa0e1f6685f8",
+        "name": "custom - tests - values",
+        "label": "",
+        "order": 3,
+        "width": "6",
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "",
+                "key": "lbl",
+                "keyType": "key",
+                "type": "text",
+                "width": "45%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "val",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "wires": [
+            []
+        ],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 660,
+        "y": 1160
+    },
+    {
+        "id": "aceec9ea820b4e49",
+        "type": "function",
+        "name": "save",
+        "func": "\n// Prototype: entity chosen for a test device (topic = device id, payload = entity uid, empty to remove the device)\n// devices have the same format as dknr-alexa: { id, name, room, type, entities, active }\n// output 1: devices changed (custom - matter) / output 2: refresh of the page\n\nconst cfg = global.get('describe.matter', 'memoryOnly') || {};\nconst test = (cfg.tests || {})[msg.topic];\n\nif (typeof test !== 'object') {\n\n    return;\n}\n\nlet devices = global.get('devices', 'default') || {};\nconst uid = typeof msg.payload === 'string' ? msg.payload : '';\n\nif (uid === '') {\n    delete devices[msg.topic];\n} else {\n    devices[msg.topic] = {\n        'id': msg.topic,\n        'name': test.name,\n        'room': '',\n        'type': test.type,\n        'entities': [uid],\n        'active': true\n    };\n}\nglobal.set('devices', devices, 'default');\n\nreturn [{ 'action': 'sync' }, { 'topic': 'devices' }];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "1e65b97d22786c1f"
+            ],
+            [
+                "24129fe41d65a6f4"
+            ]
+        ],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 890,
+        "y": 1040
+    },
+    {
+        "id": "1e65b97d22786c1f",
+        "type": "link out",
+        "name": "custom - tests - matter",
+        "mode": "link",
+        "links": [
+            "ca26314f1439c15f"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 1120,
+        "y": 1040
+    },
+    {
+        "id": "24129fe41d65a6f4",
+        "type": "link out",
+        "name": "custom - tests - refresh",
+        "mode": "link",
+        "links": [
+            "b0ebd3ad8d81c265",
+            "edd988e3b6005cfa"
+        ],
+        "wires": [],
+        "z": "48135a54600713e8",
+        "g": "2ed8f7b04f4e6fcb",
+        "x": 1120,
+        "y": 1100
+    }
+]

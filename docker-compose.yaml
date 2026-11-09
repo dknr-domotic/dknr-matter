@@ -1,0 +1,55 @@
+# DKNR Matter
+#
+# Required the following environement variables:
+# - DKNR_USERNAME
+# - DKNR_PASSWORD
+# - DKNR_SECRET
+#
+# Matter needs the network of the host (IPv6 link-local addresses, mDNS discovery, UDP port 5540):
+# the container runs in host network mode, with IPv6 enabled on the host. No port mapping.
+# Optional environment variables:
+# - PORT: HTTP port of the dashboard and of the Node-RED editor (1880)
+# - DKNR_MATTER_PORT: UDP port of the Matter bridge (5540)
+# - DKNR_MATTER_INTERFACE: network interface used for the Matter discovery, ex: eth0 (all)
+# - DKNR_MATTER_LOG: matter.js log level: debug, info, notice, warn, error (notice)
+#
+# DKNR Matter must use the same MQTT server as the other DKNR projects: set it in the "Configurer" page.
+# DKNR Matter: http://<docker host>:1880, Node-RED editor: http://<docker host>:1880/admin
+# The Matter pairing (identity, paired controllers) is kept in the volume (/data/matter).
+#
+name: DKNRMatter
+
+services:
+  dknr_matter:
+    container_name: dknr_matter
+    image: jcpd/dknr-matter:latest
+    restart: unless-stopped
+    network_mode: host
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+    environment:
+      TZ: Europe/Paris
+      DKNR_USERNAME: ${DKNR_USERNAME}
+      DKNR_PASSWORD: ${DKNR_PASSWORD}
+      DKNR_SECRET: ${DKNR_SECRET}
+      # change the port if 1880 is already used on this host
+      PORT: 1880
+    volumes:
+      - dknr_matter:/data
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/$${PORT:-1880}' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+volumes:
+  dknr_matter:

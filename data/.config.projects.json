@@ -1,0 +1,8 @@
+{
+    "projects": {
+        "dknr-matter": {
+            "credentialSecret": "DKNR_SECRET"
+        }
+    },
+    "activeProject": "dknr-matter"
+}
