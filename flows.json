@@ -330,7 +330,8 @@
             "269fe06d582be842",
             "33d0071b7ead7964",
             "b0ebd3ad8d81c265",
-            "edd988e3b6005cfa"
+            "c4c1c82291420a48",
+            "b354a33eaa3d49af"
         ],
         "x": 1035,
         "y": 80,
@@ -645,7 +646,9 @@
         "z": "4c2feff02c9aebaa",
         "g": "6f2c0bf97f866aa6",
         "name": "common - error",
-        "links": [],
+        "links": [
+            "9076341930fcfbfb"
+        ],
         "x": 185,
         "y": 680,
         "wires": [
@@ -828,7 +831,8 @@
         "links": [
             "269fe06d582be842",
             "b0ebd3ad8d81c265",
-            "edd988e3b6005cfa"
+            "c4c1c82291420a48",
+            "b354a33eaa3d49af"
         ],
         "x": 1195,
         "y": 920,
@@ -854,7 +858,9 @@
         "z": "4c2feff02c9aebaa",
         "g": "94ca764ef2760841",
         "name": "common - ui - control",
-        "links": [],
+        "links": [
+            "49c0dc7986ce528e"
+        ],
         "x": 185,
         "y": 920,
         "wires": [
@@ -1201,29 +1207,58 @@
         "h": 262
     },
     {
-        "id": "2ed8f7b04f4e6fcb",
+        "id": "12b6a0a760455166",
         "type": "group",
         "z": "48135a54600713e8",
-        "name": "custom - tests",
+        "name": "custom - devices",
         "style": {
             "fill": "#0070c0",
             "fill-opacity": "0.05",
             "label": true
         },
         "nodes": [
-            "edd988e3b6005cfa",
-            "2dd2a67ed91dbeb2",
-            "3a3672e7ff8d336a",
-            "67369c7c6ab41484",
-            "0f6b285f273cf8a3",
-            "aceec9ea820b4e49",
-            "1e65b97d22786c1f",
-            "24129fe41d65a6f4"
+            "c4c1c82291420a48",
+            "e40fffb6fb800b83",
+            "0eabbfbbfbf20943",
+            "da839c3f1a0e9880",
+            "627a60a16646159b",
+            "5edffa8ad699a247"
         ],
         "x": 114,
         "y": 999,
         "w": 1160,
-        "h": 202
+        "h": 142
+    },
+    {
+        "id": "a92dd164c5136833",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - edit",
+        "style": {
+            "fill": "#0070c0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "b354a33eaa3d49af",
+            "2d7383a2c673a603",
+            "425ffc7731031d15",
+            "9c6ad8ab38a96e07",
+            "07cfcfb9566c6155",
+            "dd9cd60858bfca4f",
+            "ff9c27d2339a7277",
+            "7e8727cfb5cb1fc1",
+            "e1a542ad6c36ad2b",
+            "9076341930fcfbfb",
+            "220d4bdd88d84763",
+            "e8aeb7dd4303feed",
+            "49c0dc7986ce528e",
+            "7546a91412581734"
+        ],
+        "x": 114,
+        "y": 1179,
+        "w": 930,
+        "h": 682
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -1326,7 +1361,7 @@
                 "cols": "12"
             }
         ],
-        "order": 2,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1346,12 +1381,12 @@
         "groupType": "default"
     },
     {
-        "id": "71c85182a70747e0",
+        "id": "d76eccb028da284f",
         "type": "ui-page",
-        "name": "bridge",
+        "name": "devices",
         "ui": "df7710b4b2c4e55b",
         "path": "/",
-        "icon": "bridge",
+        "icon": "devices",
         "layout": "notebook",
         "theme": "877e716e64a22cf1",
         "breakpoints": [
@@ -1377,6 +1412,72 @@
             }
         ],
         "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e185630021805b49",
+        "type": "ui-group",
+        "name": "Appareils Matter",
+        "page": "d76eccb028da284f",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false
+    },
+    {
+        "id": "5dd9725753744d84",
+        "type": "ui-group",
+        "name": "ui - dialog - device",
+        "page": "d76eccb028da284f",
+        "width": "6",
+        "height": 1,
+        "order": 2,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "dialog",
+        "keepLoaded": true
+    },
+    {
+        "id": "71c85182a70747e0",
+        "type": "ui-page",
+        "name": "bridge",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/bridge",
+        "icon": "bridge",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1427,28 +1528,13 @@
         "keepLoaded": false
     },
     {
-        "id": "f842aa0e1f6685f8",
-        "type": "ui-group",
-        "name": "Appareils de test",
-        "page": "71c85182a70747e0",
-        "width": "6",
-        "height": 1,
-        "order": 4,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default",
-        "keepLoaded": false
-    },
-    {
         "id": "523ce0ffd567ef04",
         "type": "ui-group",
         "name": "Sources DKNR",
         "page": "71c85182a70747e0",
-        "width": "6",
+        "width": "12",
         "height": 1,
-        "order": 5,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1475,7 +1561,7 @@
         "id": "8ee6be07d7909e4c",
         "type": "function",
         "name": "custom - describe",
-        "func": "\nmsg.payload.project = 'dknr-matter';\n\nmsg.payload.hmi = {\n    'bridge': 'Pont',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.matter = {\n    // DKNR device types (same names as dknr-alexa), see custom - matter for their Matter device types\n    'types': {\n        'switch': { 'label': 'Prise' },\n        'temperature': { 'label': 'Température' }\n    },\n    // value sent to a dimmer entity (number) on \"turn on\"\n    'dimmer_on': 99,\n    // seconds given to an entity to follow an order before its real state is written back\n    'confirm': 10,\n    // Matter state (identity, pairings): in the volume, never in the repository\n    'storage': env.get('DKNR_MATTER_STORAGE') || '/data/matter',\n    // network interface used for the discovery (mDNS), all if empty\n    'interface': env.get('DKNR_MATTER_INTERFACE') || '',\n    // matter.js log level: debug, info, notice, warn, error\n    'log': env.get('DKNR_MATTER_LOG') || 'notice',\n    // test vendor and product ids of the Matter specification\n    'vendor': 0xfff1,\n    'product': 0x8000,\n    // bridges by id: a device without bridge goes to \"main\"\n    // the id of a bridge must never change: it names its storage, so its pairings\n    'bridges': {\n        'main': { 'name': 'DKNR Matter', 'port': Number(env.get('DKNR_MATTER_PORT')) || 5540 }\n    },\n    // prototype: test devices set from the Pont page, before the Appareils page\n    'tests': {\n        'test-switch': { 'type': 'switch', 'name': 'Prise de test' },\n        'test-temperature': { 'type': 'temperature', 'name': 'Température de test' }\n    }\n};\n\nreturn msg;\n",
+        "func": "\nmsg.payload.project = 'dknr-matter';\n\nmsg.payload.hmi = {\n    'devices': 'Appareils',\n    'bridge': 'Pont',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.matter = {\n    // DKNR device types (dknr-alexa names where they exist), see custom - matter for their Matter device types\n    //   entities: types of DKNR entities usable by the device type\n    //   command: the device accepts orders (else it only gives a state)\n    'types': {\n        'light': { 'label': 'Lumière', 'entities': ['binary', 'number'], 'command': true },\n        'dimmer': { 'label': 'Variateur', 'entities': ['number'], 'command': true },\n        'switch': { 'label': 'Prise', 'entities': ['binary', 'number'], 'command': true },\n        'blinds': { 'label': 'Volet', 'entities': ['binary', 'number'], 'command': true },\n        'contact': { 'label': 'Ouverture', 'entities': ['binary'], 'command': false },\n        'motion': { 'label': 'Mouvement', 'entities': ['binary'], 'command': false },\n        'temperature': { 'label': 'Température', 'entities': ['number'], 'command': false },\n        'humidity': { 'label': 'Humidité', 'entities': ['number'], 'command': false }\n    },\n    // value sent to a dimmer entity (number) by a light or a plug on \"turn on\"\n    'dimmer_on': 99,\n    // seconds given to the entities to follow an order: their values are ignored meanwhile, then the real state is written back\n    'confirm': 10,\n    // Matter state (identity, pairings): in the volume, never in the repository\n    'storage': env.get('DKNR_MATTER_STORAGE') || '/data/matter',\n    // network interface used for the discovery (mDNS), all if empty\n    'interface': env.get('DKNR_MATTER_INTERFACE') || '',\n    // matter.js log level: debug, info, notice, warn, error\n    'log': env.get('DKNR_MATTER_LOG') || 'notice',\n    // test vendor and product ids of the Matter specification\n    'vendor': 0xfff1,\n    'product': 0x8000,\n    // bridges by id: a device without bridge goes to \"main\"\n    // the id of a bridge must never change: it names its storage, so its pairings\n    'bridges': {\n        'main': { 'name': 'DKNR Matter', 'port': Number(env.get('DKNR_MATTER_PORT')) || 5540 }\n    }\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1532,7 +1618,7 @@
         "width": "0",
         "height": "0",
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#oe_header\">\n        <v-toolbar class=\"oe_nav\"> \n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.bridge\" @click=\"oe_nav('bridge')\" :title=\"oe_titles.bridge\" icon=\"mdi-bridge\"></v-btn> \n            <v-btn v-if=\"oe_menus.mqtt\" @click=\"oe_nav('mqtt')\" :title=\"oe_titles.mqtt\" icon=\"mdi-cog\"></v-btn> \n        </v-btn-group>\n        <v-toolbar-title :text=\"msg.title\"></v-toolbar-title>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n        </v-toolbar>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: { bridge: true, mqtt: true },\n                oe_titles: { bridge: '', mqtt: '' },\n                mounted: false\n            }\n        },\n        mounted() {\n            let div = document.createElement(\"div\");\n            div.id=\"oe_header\";\n            const el = document.body.querySelector(\"#app\").prepend(div);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>\n",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#oe_header\">\n        <v-toolbar class=\"oe_nav\"> \n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.devices\" @click=\"oe_nav('devices')\" :title=\"oe_titles.devices\" icon=\"mdi-devices\"></v-btn> \n            <v-btn v-if=\"oe_menus.bridge\" @click=\"oe_nav('bridge')\" :title=\"oe_titles.bridge\" icon=\"mdi-bridge\"></v-btn> \n            <v-btn v-if=\"oe_menus.mqtt\" @click=\"oe_nav('mqtt')\" :title=\"oe_titles.mqtt\" icon=\"mdi-cog\"></v-btn> \n        </v-btn-group>\n        <v-toolbar-title :text=\"msg.title\"></v-toolbar-title>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n        </v-toolbar>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: { devices: true, bridge: true, mqtt: true },\n                oe_titles: { devices: '', bridge: '', mqtt: '' },\n                mounted: false\n            }\n        },\n        mounted() {\n            let div = document.createElement(\"div\");\n            div.id=\"oe_header\";\n            const el = document.body.querySelector(\"#app\").prepend(div);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>\n",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
@@ -1691,7 +1777,7 @@
         "links": [
             "d12898380bab4ecf",
             "ae87ca76b7e1c8c2",
-            "1e65b97d22786c1f"
+            "e8aeb7dd4303feed"
         ],
         "wires": [
             [
@@ -1711,7 +1797,7 @@
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "\n// Matter bridges engine (matter.js), created when the flow starts and closed when it stops\n// libs: matter (@matter/main), devices (@matter/main/devices), endpoints (@matter/main/endpoints),\n//       behaviors (@matter/main/behaviors), mtypes (@matter/main/types), dgram\n// output 1: DKNR commands (MQTT) / output 2: status changed (refresh of the pages)\n//\n// A bridge is a Matter node (ServerNode) with its own pairing, port and storage. It holds an\n// aggregator endpoint and one bridged endpoint per DKNR device. Bridges are kept by id: only\n// the bridge \"main\" exists today, a device without bridge goes to it.\n\nconst BOOL_ON = [true, 1, '1', 'true', 'ON', 'on', 'On'];\n\n// DKNR device types to Matter device types\n//   device: Matter device type\n//   state: DKNR value to Matter attributes (null if the value is not usable)\n//   listen: call order(context, asked) when an attribute changes, returns the function removing the listener\n//   command: asked state to DKNR value of an entity (undefined: nothing to send)\nconst types = {\n    'switch': {\n        'device': devices.OnOffPlugInUnitDevice,\n        'state': (def, value) => {\n            if (def.type === 'number') {\n                const num = Number.parseFloat(value);\n\n                return isNaN(num) ? null : { 'onOff': { 'onOff': num > 0 } };\n            }\n\n            return { 'onOff': { 'onOff': BOOL_ON.includes(value) !== (def.unit === 'rb') } };\n        },\n        'listen': (endpoint, order) => {\n            const handler = (value, old, context) => order(context, { 'onOff': { 'onOff': value === true } });\n            endpoint.events.onOff.onOff$Changed.on(handler);\n\n            return () => endpoint.events.onOff.onOff$Changed.off(handler);\n        },\n        'command': (def, asked, current, cfg) => {\n            const on = asked.onOff.onOff;\n            if (def.type === 'number') {\n                // dimmer: keep its level if already on\n                if (on && Number.parseFloat(current) > 0) {\n\n                    return undefined;\n                }\n\n                return on ? (cfg.dimmer_on || 99) : 0;\n            }\n\n            return on !== (def.unit === 'rb') ? 1 : 0;\n        }\n    },\n    'temperature': {\n        'device': devices.TemperatureSensorDevice,\n        'state': (def, value) => {\n            const num = Number.parseFloat(value);\n\n            // Matter: hundredths of °C\n            return isNaN(num) ? null : { 'temperatureMeasurement': { 'measuredValue': Math.round(num * 100) } };\n        }\n    }\n};\n\nconst engine = {\n    'bridges': {},\n    'queue': Promise.resolve(),\n    'closed': false\n};\n\nconst config = () => global.get('describe.matter', 'memoryOnly') || {};\nconst allDevices = () => global.get('devices', 'default') || {};\nconst catalog = () => global.get('catalog', 'memoryOnly') || { 'entities': {}, 'values': {} };\n\n// one action at a time\nengine.push = function (task) {\n    engine.queue = engine.queue.then(task).catch(e => node.error('matter: ' + (e && e.message ? e.message : e)));\n\n    return engine.queue;\n};\n\n// devices published by a bridge\nfunction wanted(bridge) {\n    const all = allDevices();\n    let list = {};\n    for (const id in all) {\n        const d = all[id];\n        if (typeof d === 'object' && d !== null && d.active === true && Array.isArray(d.entities) && d.entities.length > 0\n            && typeof types[d.type] === 'object' && (d.bridge || 'main') === bridge.id\n        ) {\n            list[id] = d;\n        }\n    }\n\n    return list;\n}\n\n// value of an entity: current one, or the last one known before restart (sources not retaining their values)\nfunction valueOf(uid) {\n    const values = catalog().values || {};\n    if (values[uid] !== undefined) {\n\n        return values[uid];\n    }\n\n    return (global.get('last', 'default') || {})[uid];\n}\n\n// QR code of a pairing code as a SVG image (matter.js draws it with block characters, two modules per character)\nfunction qrSvg(text) {\n    const lines = mtypes.QrCode.get(text).split('\\n').filter(l => l.trim() !== '');\n    const width = Math.max(...lines.map(l => [...l].length));\n    const height = lines.length * 2;\n    let path = '';\n    lines.forEach((line, row) => {\n        const chars = [...line];\n        for (let x = 0; x < width; x++) {\n            const c = chars[x] || ' ';\n            const dark = [c !== '█' && c !== '▀', c !== '█' && c !== '▄'];\n            for (let half = 0; half < 2; half++) {\n                const y = row * 2 + half;\n                // first and last half lines are outside the code\n                if (dark[half] && y > 0 && y < height - 1) {\n                    path += 'M' + x + ' ' + y + 'h1v1h-1z';\n                }\n            }\n        }\n    });\n\n    return '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-3 -2 ' + (width + 6) + ' ' + (height + 4) + '\" shape-rendering=\"crispEdges\">'\n        + '<rect x=\"-3\" y=\"-2\" width=\"' + (width + 6) + '\" height=\"' + (height + 4) + '\" fill=\"#ffffff\"/>'\n        + '<path fill=\"#000000\" d=\"' + path + '\"/></svg>';\n}\n\n// status of the bridges for the pages (plain data)\nfunction publish() {\n    let status = {};\n    let texts = [];\n    for (const id in engine.bridges) {\n        const b = engine.bridges[id];\n        let s = { 'id': id, 'status': b.status, 'error': b.error || '', 'port': b.port, 'devices': Object.keys(b.endpoints).length, 'commissioned': false, 'fabrics': [], 'manual': '', 'qr': '', 'window': b.window || 0 };\n        if (b.server && b.status === 'online') {\n            try {\n                const c = b.server.state.commissioning;\n                s.commissioned = c.commissioned === true;\n                s.manual = c.pairingCodes.manualPairingCode;\n                s.qr = c.pairingCodes.qrPairingCode;\n                s.svg = qrSvg(s.qr);\n                s.fabrics = Object.values(c.fabrics || {}).map(f => ({\n                    'index': Number(f.fabricIndex),\n                    'vendor': Number(f.rootVendorId),\n                    'label': String(f.label || '')\n                }));\n            } catch (e) {\n                s.error = e.message;\n            }\n        }\n        status[id] = s;\n        texts.push(id + ': ' + s.status + ' (' + s.devices + ')');\n    }\n    global.set('matter', status, 'memoryOnly');\n    node.status({\n        'fill': Object.values(status).every(s => s.status === 'online') ? 'green' : 'red',\n        'shape': 'dot',\n        'text': texts.join(', ') || 'no bridge'\n    });\n    node.send([null, { 'topic': 'status' }]);\n}\n\n// matter.js binds its sockets in the background: a failure there stops Node-RED,\n// so the port and IPv6 are checked before\nfunction check(port) {\n    const bind = type => new Promise(resolve => {\n        const socket = dgram.createSocket({ 'type': type, 'ipv6Only': type === 'udp6' });\n        socket.once('error', e => {\n            try { socket.close(); } catch (e2) { }\n            resolve(e.code || e.message);\n        });\n        socket.bind(port, () => socket.close(() => resolve('')));\n    });\n\n    return bind('udp6').then(e6 => {\n        if (e6 !== '') {\n\n            return e6 === 'EADDRINUSE' ? 'port UDP ' + port + ' déjà utilisé' : 'IPv6 indisponible (' + e6 + ')';\n        }\n\n        return bind('udp4').then(e4 => e4 === '' ? '' : (e4 === 'EADDRINUSE' ? 'port UDP ' + port + ' déjà utilisé' : 'port UDP ' + port + ' indisponible (' + e4 + ')'));\n    });\n}\n\n// DKNR value to Matter attributes of a device\nasync function apply(bridge, id, force) {\n    const item = bridge.endpoints[id];\n    const dev = allDevices()[id];\n    if (!item || typeof dev !== 'object' || dev === null) {\n\n        return;\n    }\n    // state comes from the first entity of the device\n    const uid = dev.entities[0];\n    const value = valueOf(uid);\n    if (value === undefined) {\n\n        return;\n    }\n    const state = types[item.type].state((catalog().entities || {})[uid] || {}, value);\n    if (state === null) {\n\n        return;\n    }\n    const key = JSON.stringify(state);\n    if (!force && item.key === key) {\n\n        return;\n    }\n    item.key = key;\n    await item.endpoint.set(state);\n}\n\n// order of a controller to DKNR commands, one per entity of the device\nfunction order(bridge, id, context, asked) {\n    // change written by this engine (DKNR value), not by a controller\n    if (engine.closed || !context || context.offline === true) {\n\n        return;\n    }\n    const item = bridge.endpoints[id];\n    const dev = allDevices()[id];\n    const topic = global.get('mqtt.topic', 'default') || '';\n    const cfg = config();\n    if (!item || typeof dev !== 'object' || dev === null || typeof types[item.type].command !== 'function') {\n\n        return;\n    }\n\n    let out = [];\n    for (const uid of dev.entities || []) {\n        const value = types[item.type].command((catalog().entities || {})[uid] || {}, asked, valueOf(uid), cfg);\n        if (value === undefined || topic === '') {\n            continue;\n        }\n        out.push({\n            'topic': [topic, 'set', uid].join('/'),\n            'payload': String(value),\n            'qos': 0,\n            'retain': false\n        });\n    }\n\n    // the controller already knows the asked state. If the entity does not follow,\n    // its real state is written back after a delay\n    item.key = JSON.stringify(asked);\n    clearTimeout(item.timer);\n    item.timer = setTimeout(() => {\n        engine.push(() => engine.closed ? null : apply(bridge, id, true));\n    }, (cfg.confirm || 10) * 1000);\n\n    if (out.length > 0) {\n        node.send([out, null]);\n    }\n}\n\n// add, rename and remove the endpoints of a bridge from the devices\nasync function sync(bridge) {\n    const list = wanted(bridge);\n    let changed = false;\n\n    for (const id in bridge.endpoints) {\n        const item = bridge.endpoints[id];\n        if (typeof list[id] !== 'object' || list[id].type !== item.type) {\n            clearTimeout(item.timer);\n            if (item.off) {\n                item.off();\n            }\n            // delete: the endpoint number is not used again, controllers forget the device\n            await item.endpoint.delete();\n            delete bridge.endpoints[id];\n            changed = true;\n        }\n    }\n\n    for (const id in list) {\n        const dev = list[id];\n        const label = String(dev.name || id).slice(0, 32);\n        let item = bridge.endpoints[id];\n        if (!item) {\n            const type = types[dev.type];\n            // the endpoint id gives a stable endpoint number: changing it creates a new device on controllers\n            const endpoint = new matter.Endpoint(type.device.with(behaviors.BridgedDeviceBasicInformationServer), {\n                'id': id,\n                'bridgedDeviceBasicInformation': {\n                    'nodeLabel': label,\n                    'productName': label,\n                    'vendorName': 'DKNR',\n                    'serialNumber': id.slice(0, 32),\n                    'reachable': true\n                }\n            });\n            await bridge.aggregator.add(endpoint);\n            item = { 'endpoint': endpoint, 'type': dev.type, 'label': label, 'key': null, 'timer': null, 'off': null };\n            if (typeof type.listen === 'function') {\n                item.off = type.listen(endpoint, (context, asked) => order(bridge, id, context, asked));\n            }\n            bridge.endpoints[id] = item;\n            changed = true;\n        } else if (item.label !== label) {\n            await item.endpoint.set({ 'bridgedDeviceBasicInformation': { 'nodeLabel': label } });\n            item.label = label;\n            changed = true;\n        }\n        await apply(bridge, id, false);\n    }\n\n    return changed;\n}\n\nasync function start(id) {\n    const cfg = config();\n    const def = (cfg.bridges || {})[id];\n    if (typeof def !== 'object' || engine.bridges[id]) {\n\n        return;\n    }\n    const bridge = { 'id': id, 'port': def.port, 'status': 'starting', 'error': '', 'server': null, 'aggregator': null, 'endpoints': {}, 'offs': [], 'window': 0 };\n    engine.bridges[id] = bridge;\n\n    try {\n        // previous engine (redeploy): wait for its sockets and storage to be closed\n        const closing = global.get('matter_closing', 'memoryOnly');\n        if (closing && typeof closing.then === 'function') {\n            await closing;\n        }\n\n        const problem = await check(bridge.port);\n        if (problem !== '') {\n            throw new Error(problem);\n        }\n\n        // matter.js must not handle the signals nor the exit code of Node-RED\n        const env = matter.Environment.default;\n        env.vars.set('runtime.signals', false);\n        env.vars.set('runtime.exitcode', false);\n        env.vars.set('storage.path', cfg.storage);\n        env.vars.set('log.level', cfg.log || 'notice');\n        env.vars.set('log.format', 'plain');\n        if (cfg.interface) {\n            env.vars.set('mdns.networkInterface', cfg.interface);\n        }\n\n        bridge.server = await matter.ServerNode.create({\n            'id': id,\n            'network': { 'port': bridge.port },\n            'productDescription': { 'name': def.name, 'deviceType': endpoints.AggregatorEndpoint.deviceType },\n            'basicInformation': {\n                'vendorName': 'DKNR',\n                'vendorId': matter.VendorId(cfg.vendor),\n                'productName': 'DKNR Matter',\n                'productId': cfg.product,\n                'nodeLabel': def.name,\n                'hardwareVersion': 1,\n                'hardwareVersionString': '1',\n                'softwareVersion': 1,\n                'softwareVersionString': String(global.get('describe.app.version', 'memoryOnly') || '1')\n            }\n        });\n        bridge.aggregator = new matter.Endpoint(endpoints.AggregatorEndpoint, { 'id': 'aggregator' });\n        await bridge.server.add(bridge.aggregator);\n        await sync(bridge);\n        await bridge.server.start();\n\n        const changed = () => {\n            bridge.window = 0;\n            publish();\n        };\n        const events = bridge.server.events.commissioning;\n        for (const name of ['commissioned', 'decommissioned', 'fabricsChanged']) {\n            events[name].on(changed);\n            bridge.offs.push(() => events[name].off(changed));\n        }\n        bridge.status = 'online';\n    } catch (e) {\n        bridge.status = 'error';\n        bridge.error = e && e.message ? e.message : String(e);\n        node.error('matter: bridge ' + id + ': ' + bridge.error);\n        if (bridge.server) {\n            try { await bridge.server.close(); } catch (e2) { }\n            bridge.server = null;\n        }\n    }\n    publish();\n}\n\nasync function stop(id) {\n    const bridge = engine.bridges[id];\n    if (!bridge) {\n\n        return;\n    }\n    for (const off of bridge.offs) {\n        off();\n    }\n    for (const eid in bridge.endpoints) {\n        clearTimeout(bridge.endpoints[eid].timer);\n        if (bridge.endpoints[eid].off) {\n            bridge.endpoints[eid].off();\n        }\n    }\n    if (bridge.server) {\n        try { await bridge.server.close(); } catch (e) { }\n    }\n    delete engine.bridges[id];\n}\n\n// actions (msg.action)\nengine.actions = {\n    // start the bridges (boot)\n    'start': async () => {\n        for (const id in config().bridges || {}) {\n            await start(id);\n        }\n    },\n    // DKNR value of an entity (msg.topic = entity uid)\n    'value': async msg => {\n        const all = allDevices();\n        for (const id in engine.bridges) {\n            const bridge = engine.bridges[id];\n            if (bridge.status !== 'online') {\n                continue;\n            }\n            for (const eid in bridge.endpoints) {\n                if (typeof all[eid] === 'object' && all[eid].entities[0] === msg.topic) {\n                    await apply(bridge, eid, false);\n                }\n            }\n        }\n    },\n    // devices changed\n    'sync': async () => {\n        let changed = false;\n        for (const id in engine.bridges) {\n            if (engine.bridges[id].status === 'online') {\n                changed = await sync(engine.bridges[id]) || changed;\n            }\n        }\n        if (changed) {\n            publish();\n        }\n    },\n    // open the pairing of a bridge already paired, for another controller (msg.bridge)\n    'open': async msg => {\n        const bridge = engine.bridges[msg.bridge || 'main'];\n        if (!bridge || bridge.status !== 'online') {\n\n            return;\n        }\n        await bridge.server.act(agent => agent.commissioning.enterCommissionableMode());\n        bridge.window = Date.now() + 15 * 60000;\n        publish();\n    },\n    // forget all the controllers of a bridge (msg.bridge): new pairing codes\n    'reset': async msg => {\n        const id = msg.bridge || 'main';\n        const bridge = engine.bridges[id];\n        if (!bridge) {\n\n            return;\n        }\n        if (bridge.server) {\n            await bridge.server.erase();\n        }\n        await stop(id);\n        await start(id);\n    },\n    // try again a bridge in error (msg.bridge)\n    'retry': async msg => {\n        const id = msg.bridge || 'main';\n        if (engine.bridges[id] && engine.bridges[id].status === 'online') {\n\n            return;\n        }\n        await stop(id);\n        await start(id);\n    }\n};\n\nengine.close = function () {\n    engine.closed = true;\n\n    return engine.push(async () => {\n        for (const id of Object.keys(engine.bridges)) {\n            await stop(id);\n        }\n    });\n};\n\ncontext.set('engine', engine, 'memoryOnly');\nnode.status({ 'fill': 'grey', 'shape': 'dot', 'text': 'waiting' });\n",
+        "initialize": "\n// Matter bridges engine (matter.js), created when the flow starts and closed when it stops\n// libs: matter (@matter/main), devices (@matter/main/devices), endpoints (@matter/main/endpoints),\n//       behaviors (@matter/main/behaviors), mtypes (@matter/main/types), dgram\n// output 1: DKNR commands (MQTT) / output 2: status changed (refresh of the pages)\n//\n// A bridge is a Matter node (ServerNode) with its own pairing, port and storage. It holds an\n// aggregator endpoint and one bridged endpoint per DKNR device. Bridges are kept by id: only\n// the bridge \"main\" exists today, a device without bridge goes to it.\n\nconst BOOL_ON = [true, 1, '1', 'true', 'ON', 'on', 'On'];\n\n// DKNR device types to Matter device types (labels and usable entities: see custom - describe)\n//   device: Matter device type\n//   init: attributes needed at the creation of the endpoint\n//   state: DKNR value to Matter attributes (null if the value is not usable)\n//   listen: call order() when a controller may have changed the attributes, returns the function removing the listeners\n//   command: Matter attributes (state of the endpoint) to DKNR value of an entity (undefined: nothing to send)\n// DKNR binary values are 1 / 0, unit rb is an inverted binary (ex: opening 1 = closed)\n\n// binary or number (dimmer, position) entity to boolean\nconst active = (def, value) => def.type === 'number' ? Number.parseFloat(value) > 0 : BOOL_ON.includes(value) !== (def.unit === 'rb');\n// attribute changes to order()\nconst listen = (endpoint, order, list) => {\n    const handler = (value, old, context) => order(context);\n    for (const [cluster, attribute] of list) {\n        endpoint.events[cluster][attribute + '$Changed'].on(handler);\n    }\n\n    return () => {\n        for (const [cluster, attribute] of list) {\n            endpoint.events[cluster][attribute + '$Changed'].off(handler);\n        }\n    };\n};\n// on / off order to a binary or dimmer entity\nconst onOffCommand = (def, state, current, cfg) => {\n    const on = state.onOff.onOff === true;\n    if (def.type === 'number') {\n        // dimmer: keep its level if already on\n        if (on && Number.parseFloat(current) > 0) {\n\n            return undefined;\n        }\n\n        return on ? (cfg.dimmer_on || 99) : 0;\n    }\n\n    return on !== (def.unit === 'rb') ? 1 : 0;\n};\nconst onOff = device => ({\n    'device': device,\n    'state': (def, value) => def.type === 'number' && isNaN(Number.parseFloat(value)) ? null : { 'onOff': { 'onOff': active(def, value) } },\n    'listen': (endpoint, order) => listen(endpoint, order, [['onOff', 'onOff']]),\n    'command': onOffCommand\n});\n// number entity to a Matter measure in hundredths\nconst measure = (device, cluster, min, max) => ({\n    'device': device,\n    'state': (def, value) => {\n        const num = Number.parseFloat(value);\n\n        return isNaN(num) ? null : { [cluster]: { 'measuredValue': Math.max(min, Math.min(max, Math.round(num * 100))) } };\n    }\n});\n\nconst types = {\n    'light': onOff(devices.OnOffLightDevice),\n    'switch': onOff(devices.OnOffPlugInUnitDevice),\n    'dimmer': {\n        'device': devices.DimmableLightDevice,\n        // a level is required by the level commands\n        'init': { 'levelControl': { 'currentLevel': 254 } },\n        // DKNR level 0-99, Matter level 1-254\n        'state': (def, value) => {\n            const num = Number.parseFloat(value);\n            if (isNaN(num)) {\n\n                return null;\n            }\n            if (num <= 0) {\n\n                return { 'onOff': { 'onOff': false } };\n            }\n\n            return { 'onOff': { 'onOff': true }, 'levelControl': { 'currentLevel': Math.max(1, Math.min(254, Math.round(Math.min(num, 99) / 99 * 254))) } };\n        },\n        'listen': (endpoint, order) => listen(endpoint, order, [['onOff', 'onOff'], ['levelControl', 'currentLevel']]),\n        'command': (def, state) => {\n            if (state.onOff.onOff !== true) {\n\n                return 0;\n            }\n\n            return Math.max(1, Math.min(99, Math.round((state.levelControl.currentLevel || 254) / 254 * 99)));\n        }\n    },\n    'blinds': {\n        'device': devices.WindowCoveringDevice.with(behaviors.WindowCoveringServer.with('Lift', 'PositionAwareLift')),\n        // DKNR: percentage of opening (Z-Wave multilevel: 99 is fully open), Matter: hundredths of percent of closing\n        'state': (def, value) => {\n            let open;\n            if (def.type === 'binary') {\n                open = active(def, value) ? 100 : 0;\n            } else {\n                const num = Number.parseFloat(value);\n                if (isNaN(num)) {\n\n                    return null;\n                }\n                open = num >= 99 ? 100 : Math.max(0, Math.round(num));\n            }\n            const closed = (100 - open) * 100;\n\n            return { 'windowCovering': { 'currentPositionLiftPercent100ths': closed, 'targetPositionLiftPercent100ths': closed } };\n        },\n        // matter.js writes the asked position in the target, then in the current position\n        'listen': (endpoint, order) => listen(endpoint, order, [['windowCovering', 'targetPositionLiftPercent100ths']]),\n        'command': (def, state) => {\n            const closed = state.windowCovering.targetPositionLiftPercent100ths;\n            if (typeof closed !== 'number') {\n\n                return undefined;\n            }\n            const open = 100 - closed / 100;\n            if (def.type === 'binary') {\n\n                return (open >= 50) !== (def.unit === 'rb') ? 1 : 0;\n            }\n\n            return Math.max(0, Math.min(99, Math.round(open)));\n        }\n    },\n    'contact': {\n        'device': devices.ContactSensorDevice,\n        'init': { 'booleanState': { 'stateValue': true } },\n        // Matter: true when the contact is closed\n        'state': (def, value) => ({ 'booleanState': { 'stateValue': !active(def, value) } })\n    },\n    'motion': {\n        'device': devices.OccupancySensorDevice.with(behaviors.OccupancySensingServer.with('PassiveInfrared')),\n        'state': (def, value) => ({ 'occupancySensing': { 'occupancy': { 'occupied': active(def, value) } } })\n    },\n    'temperature': measure(devices.TemperatureSensorDevice, 'temperatureMeasurement', -27315, 32767),\n    'humidity': measure(devices.HumiditySensorDevice, 'relativeHumidityMeasurement', 0, 10000)\n};\n\nconst engine = {\n    'bridges': {},\n    'queue': Promise.resolve(),\n    'closed': false\n};\n\nconst config = () => global.get('describe.matter', 'memoryOnly') || {};\nconst allDevices = () => global.get('devices', 'default') || {};\nconst catalog = () => global.get('catalog', 'memoryOnly') || { 'entities': {}, 'values': {} };\n\n// one action at a time\nengine.push = function (task) {\n    engine.queue = engine.queue.then(task).catch(e => node.error('matter: ' + (e && e.message ? e.message : e)));\n\n    return engine.queue;\n};\n\n// devices published by a bridge\nfunction wanted(bridge) {\n    const all = allDevices();\n    let list = {};\n    for (const id in all) {\n        const d = all[id];\n        if (typeof d === 'object' && d !== null && d.active === true && Array.isArray(d.entities) && d.entities.length > 0\n            && typeof types[d.type] === 'object' && (d.bridge || 'main') === bridge.id\n        ) {\n            list[id] = d;\n        }\n    }\n\n    return list;\n}\n\n// value of an entity: current one, or the last one known before restart (sources not retaining their values)\nfunction valueOf(uid) {\n    const values = catalog().values || {};\n    if (values[uid] !== undefined) {\n\n        return values[uid];\n    }\n\n    return (global.get('last', 'default') || {})[uid];\n}\n\n// QR code of a pairing code as a SVG image (matter.js draws it with block characters, two modules per character)\nfunction qrSvg(text) {\n    const lines = mtypes.QrCode.get(text).split('\\n').filter(l => l.trim() !== '');\n    const width = Math.max(...lines.map(l => [...l].length));\n    const height = lines.length * 2;\n    let path = '';\n    lines.forEach((line, row) => {\n        const chars = [...line];\n        for (let x = 0; x < width; x++) {\n            const c = chars[x] || ' ';\n            const dark = [c !== '█' && c !== '▀', c !== '█' && c !== '▄'];\n            for (let half = 0; half < 2; half++) {\n                const y = row * 2 + half;\n                // first and last half lines are outside the code\n                if (dark[half] && y > 0 && y < height - 1) {\n                    path += 'M' + x + ' ' + y + 'h1v1h-1z';\n                }\n            }\n        }\n    });\n\n    return '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-3 -2 ' + (width + 6) + ' ' + (height + 4) + '\" shape-rendering=\"crispEdges\">'\n        + '<rect x=\"-3\" y=\"-2\" width=\"' + (width + 6) + '\" height=\"' + (height + 4) + '\" fill=\"#ffffff\"/>'\n        + '<path fill=\"#000000\" d=\"' + path + '\"/></svg>';\n}\n\n// status of the bridges for the pages (plain data)\nfunction publish() {\n    let status = {};\n    let texts = [];\n    for (const id in engine.bridges) {\n        const b = engine.bridges[id];\n        let s = { 'id': id, 'status': b.status, 'error': b.error || '', 'port': b.port, 'devices': Object.keys(b.endpoints).length, 'commissioned': false, 'fabrics': [], 'manual': '', 'qr': '', 'window': b.window || 0 };\n        if (b.server && b.status === 'online') {\n            try {\n                const c = b.server.state.commissioning;\n                s.commissioned = c.commissioned === true;\n                s.manual = c.pairingCodes.manualPairingCode;\n                s.qr = c.pairingCodes.qrPairingCode;\n                s.svg = qrSvg(s.qr);\n                s.fabrics = Object.values(c.fabrics || {}).map(f => ({\n                    'index': Number(f.fabricIndex),\n                    'vendor': Number(f.rootVendorId),\n                    'label': String(f.label || '')\n                }));\n            } catch (e) {\n                s.error = e.message;\n            }\n        }\n        status[id] = s;\n        texts.push(id + ': ' + s.status + ' (' + s.devices + ')');\n    }\n    global.set('matter', status, 'memoryOnly');\n    node.status({\n        'fill': Object.values(status).every(s => s.status === 'online') ? 'green' : 'red',\n        'shape': 'dot',\n        'text': texts.join(', ') || 'no bridge'\n    });\n    node.send([null, { 'topic': 'status' }]);\n}\n\n// matter.js binds its sockets in the background: a failure there stops Node-RED,\n// so the port and IPv6 are checked before\nfunction check(port) {\n    const bind = type => new Promise(resolve => {\n        const socket = dgram.createSocket({ 'type': type, 'ipv6Only': type === 'udp6' });\n        socket.once('error', e => {\n            try { socket.close(); } catch (e2) { }\n            resolve(e.code || e.message);\n        });\n        socket.bind(port, () => socket.close(() => resolve('')));\n    });\n\n    return bind('udp6').then(e6 => {\n        if (e6 !== '') {\n\n            return e6 === 'EADDRINUSE' ? 'port UDP ' + port + ' déjà utilisé' : 'IPv6 indisponible (' + e6 + ')';\n        }\n\n        return bind('udp4').then(e4 => e4 === '' ? '' : (e4 === 'EADDRINUSE' ? 'port UDP ' + port + ' déjà utilisé' : 'port UDP ' + port + ' indisponible (' + e4 + ')'));\n    });\n}\n\n// DKNR value to Matter attributes of a device\nasync function apply(bridge, id, force) {\n    const item = bridge.endpoints[id];\n    const dev = allDevices()[id];\n    if (!item || typeof dev !== 'object' || dev === null) {\n\n        return;\n    }\n    // state comes from the first entity of the device\n    const uid = dev.entities[0];\n    const value = valueOf(uid);\n    if (value === undefined) {\n\n        return;\n    }\n    const state = types[item.type].state((catalog().entities || {})[uid] || {}, value);\n    if (state === null) {\n\n        return;\n    }\n    // an order is running: the entities are given time to follow it (see order)\n    if (!force && item.hold > Date.now()) {\n\n        return;\n    }\n    const key = JSON.stringify(state);\n    if (!force && item.key === key) {\n\n        return;\n    }\n    item.key = key;\n    await item.endpoint.set(state);\n}\n\n// attributes changed by a controller: one order may change several attributes (ex: level then on),\n// the DKNR commands are sent once they are all written\nfunction order(bridge, id, context) {\n    // change written by this engine (DKNR value), not by a controller\n    if (engine.closed || !context || context.offline === true) {\n\n        return;\n    }\n    const item = bridge.endpoints[id];\n    if (!item) {\n\n        return;\n    }\n    clearTimeout(item.debounce);\n    item.debounce = setTimeout(() => {\n        try {\n            command(bridge, id);\n        } catch (e) {\n            node.error('matter: order of ' + id + ': ' + e.message);\n        }\n    }, 250);\n}\n\n// state asked by a controller to DKNR commands, one per entity of the device\nfunction command(bridge, id) {\n    const item = bridge.endpoints[id];\n    const dev = allDevices()[id];\n    const topic = global.get('mqtt.topic', 'default') || '';\n    const cfg = config();\n    if (engine.closed || !item || bridge.endpoints[id] !== item || typeof dev !== 'object' || dev === null || typeof types[item.type].command !== 'function') {\n\n        return;\n    }\n\n    const state = item.endpoint.state;\n    let out = [];\n    for (const uid of dev.entities || []) {\n        const value = types[item.type].command((catalog().entities || {})[uid] || {}, state, valueOf(uid), cfg);\n        if (value === undefined || topic === '') {\n            continue;\n        }\n        out.push({\n            'topic': [topic, 'set', uid].join('/'),\n            'payload': String(value),\n            'qos': 0,\n            'retain': false\n        });\n    }\n\n    // the controller already knows the asked state: the values of the entities are ignored\n    // while they follow the order, then their real state is written back\n    const delay = (cfg.confirm || 10) * 1000;\n    item.hold = Date.now() + delay;\n    clearTimeout(item.timer);\n    item.timer = setTimeout(() => {\n        item.hold = 0;\n        engine.push(() => engine.closed || bridge.endpoints[id] !== item ? null : apply(bridge, id, true));\n    }, delay);\n\n    if (out.length > 0) {\n        node.send([out, null]);\n    }\n}\n\n// add, rename and remove the endpoints of a bridge from the devices\nasync function sync(bridge) {\n    const list = wanted(bridge);\n    let changed = false;\n\n    for (const id in bridge.endpoints) {\n        const item = bridge.endpoints[id];\n        if (typeof list[id] !== 'object' || list[id].type !== item.type) {\n            clearTimeout(item.timer);\n            clearTimeout(item.debounce);\n            if (item.off) {\n                item.off();\n            }\n            // delete: the endpoint number is not used again, controllers forget the device\n            await item.endpoint.delete();\n            delete bridge.endpoints[id];\n            changed = true;\n        }\n    }\n\n    for (const id in list) {\n        const dev = list[id];\n        const label = String(dev.name || id).slice(0, 32);\n        let item = bridge.endpoints[id];\n        if (!item) {\n            const type = types[dev.type];\n            // the endpoint id gives a stable endpoint number: changing it creates a new device on controllers\n            const endpoint = new matter.Endpoint(type.device.with(behaviors.BridgedDeviceBasicInformationServer), {\n                ...(type.init || {}),\n                'id': id,\n                'bridgedDeviceBasicInformation': {\n                    'nodeLabel': label,\n                    'productName': label,\n                    'vendorName': 'DKNR',\n                    'serialNumber': id.slice(0, 32),\n                    'reachable': true\n                }\n            });\n            await bridge.aggregator.add(endpoint);\n            item = { 'endpoint': endpoint, 'type': dev.type, 'label': label, 'key': null, 'hold': 0, 'timer': null, 'debounce': null, 'off': null };\n            if (typeof type.listen === 'function') {\n                item.off = type.listen(endpoint, context => order(bridge, id, context));\n            }\n            bridge.endpoints[id] = item;\n            changed = true;\n        } else if (item.label !== label) {\n            await item.endpoint.set({ 'bridgedDeviceBasicInformation': { 'nodeLabel': label } });\n            item.label = label;\n            changed = true;\n        }\n        // the first entity of the device may have changed\n        if (item.uid !== dev.entities[0]) {\n            item.uid = dev.entities[0];\n            item.key = null;\n        }\n        await apply(bridge, id, false);\n    }\n\n    return changed;\n}\n\nasync function start(id) {\n    const cfg = config();\n    const def = (cfg.bridges || {})[id];\n    if (typeof def !== 'object' || engine.bridges[id]) {\n\n        return;\n    }\n    const bridge = { 'id': id, 'port': def.port, 'status': 'starting', 'error': '', 'server': null, 'aggregator': null, 'endpoints': {}, 'offs': [], 'window': 0 };\n    engine.bridges[id] = bridge;\n\n    try {\n        // previous engine (redeploy): wait for its sockets and storage to be closed\n        const closing = global.get('matter_closing', 'memoryOnly');\n        if (closing && typeof closing.then === 'function') {\n            await closing;\n        }\n\n        const problem = await check(bridge.port);\n        if (problem !== '') {\n            throw new Error(problem);\n        }\n\n        // matter.js must not handle the signals nor the exit code of Node-RED\n        const env = matter.Environment.default;\n        env.vars.set('runtime.signals', false);\n        env.vars.set('runtime.exitcode', false);\n        env.vars.set('storage.path', cfg.storage);\n        env.vars.set('log.level', cfg.log || 'notice');\n        env.vars.set('log.format', 'plain');\n        if (cfg.interface) {\n            env.vars.set('mdns.networkInterface', cfg.interface);\n        }\n\n        bridge.server = await matter.ServerNode.create({\n            'id': id,\n            'network': { 'port': bridge.port },\n            'productDescription': { 'name': def.name, 'deviceType': endpoints.AggregatorEndpoint.deviceType },\n            'basicInformation': {\n                'vendorName': 'DKNR',\n                'vendorId': matter.VendorId(cfg.vendor),\n                'productName': 'DKNR Matter',\n                'productId': cfg.product,\n                'nodeLabel': def.name,\n                'hardwareVersion': 1,\n                'hardwareVersionString': '1',\n                'softwareVersion': 1,\n                'softwareVersionString': String(global.get('describe.app.version', 'memoryOnly') || '1')\n            }\n        });\n        bridge.aggregator = new matter.Endpoint(endpoints.AggregatorEndpoint, { 'id': 'aggregator' });\n        await bridge.server.add(bridge.aggregator);\n        await sync(bridge);\n        await bridge.server.start();\n\n        const changed = () => {\n            bridge.window = 0;\n            publish();\n        };\n        const events = bridge.server.events.commissioning;\n        for (const name of ['commissioned', 'decommissioned', 'fabricsChanged']) {\n            events[name].on(changed);\n            bridge.offs.push(() => events[name].off(changed));\n        }\n        bridge.status = 'online';\n    } catch (e) {\n        bridge.status = 'error';\n        bridge.error = e && e.message ? e.message : String(e);\n        node.error('matter: bridge ' + id + ': ' + bridge.error);\n        if (bridge.server) {\n            try { await bridge.server.close(); } catch (e2) { }\n            bridge.server = null;\n        }\n    }\n    publish();\n}\n\nasync function stop(id) {\n    const bridge = engine.bridges[id];\n    if (!bridge) {\n\n        return;\n    }\n    for (const off of bridge.offs) {\n        off();\n    }\n    for (const eid in bridge.endpoints) {\n        clearTimeout(bridge.endpoints[eid].timer);\n        clearTimeout(bridge.endpoints[eid].debounce);\n        if (bridge.endpoints[eid].off) {\n            bridge.endpoints[eid].off();\n        }\n    }\n    if (bridge.server) {\n        try { await bridge.server.close(); } catch (e) { }\n    }\n    delete engine.bridges[id];\n}\n\n// actions (msg.action)\nengine.actions = {\n    // start the bridges (boot)\n    'start': async () => {\n        for (const id in config().bridges || {}) {\n            await start(id);\n        }\n    },\n    // DKNR value of an entity (msg.topic = entity uid)\n    'value': async msg => {\n        const all = allDevices();\n        for (const id in engine.bridges) {\n            const bridge = engine.bridges[id];\n            if (bridge.status !== 'online') {\n                continue;\n            }\n            for (const eid in bridge.endpoints) {\n                if (typeof all[eid] === 'object' && all[eid].entities[0] === msg.topic) {\n                    await apply(bridge, eid, false);\n                }\n            }\n        }\n    },\n    // devices changed\n    'sync': async () => {\n        let changed = false;\n        for (const id in engine.bridges) {\n            if (engine.bridges[id].status === 'online') {\n                changed = await sync(engine.bridges[id]) || changed;\n            }\n        }\n        if (changed) {\n            publish();\n        }\n    },\n    // open the pairing of a bridge already paired, for another controller (msg.bridge)\n    'open': async msg => {\n        const bridge = engine.bridges[msg.bridge || 'main'];\n        if (!bridge || bridge.status !== 'online') {\n\n            return;\n        }\n        await bridge.server.act(agent => agent.commissioning.enterCommissionableMode());\n        bridge.window = Date.now() + 15 * 60000;\n        publish();\n    },\n    // forget all the controllers of a bridge (msg.bridge): new pairing codes\n    'reset': async msg => {\n        const id = msg.bridge || 'main';\n        const bridge = engine.bridges[id];\n        if (!bridge) {\n\n            return;\n        }\n        if (bridge.server) {\n            await bridge.server.erase();\n        }\n        await stop(id);\n        await start(id);\n    },\n    // try again a bridge in error (msg.bridge)\n    'retry': async msg => {\n        const id = msg.bridge || 'main';\n        if (engine.bridges[id] && engine.bridges[id].status === 'online') {\n\n            return;\n        }\n        await stop(id);\n        await start(id);\n    }\n};\n\nengine.close = function () {\n    engine.closed = true;\n\n    return engine.push(async () => {\n        for (const id of Object.keys(engine.bridges)) {\n            await stop(id);\n        }\n    });\n};\n\ncontext.set('engine', engine, 'memoryOnly');\nnode.status({ 'fill': 'grey', 'shape': 'dot', 'text': 'waiting' });\n",
         "finalize": "// close the bridges, the next engine waits for it (see \"On Start\")\nconst engine = context.get('engine', 'memoryOnly');\nif (typeof engine === 'object' && engine !== null && typeof engine.close === 'function') {\n    global.set('matter_closing', engine.close(), 'memoryOnly');\n}\n",
         "libs": [
             {
@@ -1792,7 +1878,7 @@
         "mode": "link",
         "links": [
             "b0ebd3ad8d81c265",
-            "edd988e3b6005cfa"
+            "c4c1c82291420a48"
         ],
         "wires": [],
         "z": "48135a54600713e8",
@@ -1807,8 +1893,7 @@
         "links": [
             "d0ee4b417bfa2bb7",
             "ddab942f6d49a661",
-            "4817fc679731eab2",
-            "24129fe41d65a6f4"
+            "4817fc679731eab2"
         ],
         "wires": [
             [
@@ -2009,7 +2094,7 @@
         "name": "custom - bridge - sources",
         "label": "",
         "order": 1,
-        "width": "6",
+        "width": "12",
         "height": 0,
         "maxrows": 0,
         "passthru": false,
@@ -2064,31 +2149,33 @@
         "y": 920
     },
     {
-        "id": "edd988e3b6005cfa",
+        "id": "c4c1c82291420a48",
         "type": "link in",
-        "name": "custom - tests",
+        "z": "48135a54600713e8",
+        "g": "12b6a0a760455166",
+        "name": "custom - devices",
         "links": [
             "d0ee4b417bfa2bb7",
             "ddab942f6d49a661",
-            "4817fc679731eab2",
-            "24129fe41d65a6f4"
+            "220d4bdd88d84763",
+            "4817fc679731eab2"
         ],
         "wires": [
             [
-                "2dd2a67ed91dbeb2"
+                "e40fffb6fb800b83"
             ]
         ],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
         "x": 200,
         "y": 1040
     },
     {
-        "id": "2dd2a67ed91dbeb2",
+        "id": "e40fffb6fb800b83",
         "type": "function",
-        "name": "tests",
-        "func": "\n// Prototype: test devices of the Pont page, before the Appareils page\n// output 1: entities of the test plug / output 2: entities of the test temperature / output 3: values table\n\nconst cfg = global.get('describe.matter', 'memoryOnly') || {};\nconst devices = global.get('devices', 'default') || {};\nconst catalog = global.get('catalog', 'memoryOnly') || { 'sources': {}, 'parents': {}, 'entities': {}, 'values': {} };\nconst last = global.get('last', 'default') || {};\n\n// entities usable by a device type\nfunction options(type, current) {\n    let list = [];\n    for (const uid in catalog.entities) {\n        const def = catalog.entities[uid];\n        const ok = type === 'switch'\n            ? def.type === 'binary' || (def.type === 'number' && def.unit === '%')\n            : def.type === 'number' && def.unit.indexOf('°') !== -1;\n        if (ok || uid === current) {\n            const parent = uid.split('/').slice(0, 2).join('/');\n            list.push({ 'label': (catalog.parents[parent] || parent) + ' - ' + def.name + ' (' + uid + ')', 'value': uid });\n        }\n    }\n    // entity not received yet (source stopped, MQTT not configured)\n    if (current !== '' && typeof catalog.entities[current] !== 'object') {\n        list.push({ 'label': current, 'value': current });\n    }\n    list.sort((a, b) => a.label.localeCompare(b.label));\n    list.unshift({ 'label': 'Aucune', 'value': '' });\n\n    return list;\n}\n\nlet out = [];\nlet rows = [];\nfor (const id in cfg.tests || {}) {\n    const d = devices[id];\n    const current = typeof d === 'object' && Array.isArray(d.entities) && d.entities.length > 0 ? d.entities[0] : '';\n    out.push({ 'payload': current, 'ui_update': { 'options': options(cfg.tests[id].type, current) } });\n    if (current !== '') {\n        const value = catalog.values[current] !== undefined ? catalog.values[current] : last[current];\n        const unit = (catalog.entities[current] || {}).unit || '';\n        rows.push({ 'lbl': cfg.tests[id].name, 'val': value === undefined ? 'aucune valeur reçue' : String(value) + (unit && unit !== 'rb' ? ' ' + unit : '') });\n    }\n}\nout.push({ 'payload': rows });\n\nreturn out;\n",
-        "outputs": 3,
+        "z": "48135a54600713e8",
+        "g": "12b6a0a760455166",
+        "name": "list",
+        "func": "\n// Appareils page: table of the Matter devices\n\n// DKNR value of the first entity of a device to readable state (same rules as custom - matter)\nfunction stateText(type, def, value) {\n    def = def || {};\n    const rb = def.unit === 'rb';\n    const on = [true, 1, '1', 'true', 'ON', 'on', 'On'].includes(value);\n    const num = Number.parseFloat(value);\n    const active = def.type === 'number' ? num > 0 : on !== rb;\n\n    switch (type) {\n        case 'light':\n        case 'switch':\n\n            return active ? 'Allumé' : 'Eteint';\n        case 'dimmer':\n            if (def.type !== 'number') {\n\n                return active ? 'Allumé' : 'Eteint';\n            }\n\n            return isNaN(num) ? '' : (num > 0 ? Math.round(Math.min(num, 99) / 99 * 100) + ' %' : 'Eteint');\n        case 'contact':\n\n            return active ? 'Ouvert' : 'Fermé';\n        case 'motion':\n\n            return active ? 'Mouvement' : 'Aucun mouvement';\n        case 'temperature':\n\n            return isNaN(num) ? '' : String(Math.round(num * 10) / 10).replace('.', ',') + ' °C';\n        case 'humidity':\n\n            return isNaN(num) ? '' : Math.round(num) + ' %';\n        case 'blinds':\n            if (def.type === 'binary') {\n\n                return active ? 'Ouvert' : 'Fermé';\n            }\n\n            // Z-Wave multilevel: 99 is fully open\n            return isNaN(num) ? '' : (num >= 99 ? 100 : Math.max(0, Math.round(num))) + ' %';\n    }\n\n    return '';\n}\n\n// DKNR entity names: source / parent / entity\nfunction entityNames(catalog, uid) {\n    const path = String(uid).split('/');\n    const def = (catalog.entities || {})[uid];\n\n    return {\n        'source': (catalog.sources || {})[path[0]] || path[0] || '',\n        'parent': (catalog.parents || {})[path[0] + '/' + path[1]] || path[1] || '',\n        'entity': def ? def.name : (path[2] || ''),\n        'unit': def ? def.unit : '',\n        'known': def !== undefined\n    };\n}\n\n// DKNR entity readable name: parent / entity\nfunction entityLabel(catalog, uid) {\n    const n = entityNames(catalog, uid);\n\n    return n.parent + ' / ' + n.entity + (n.known ? '' : ' (introuvable)');\n}\n\nconst devices = global.get('devices', 'default') || {};\nconst catalog = global.get('catalog', 'memoryOnly') || { 'sources': {}, 'parents': {}, 'entities': {}, 'values': {} };\nconst types = (global.get('describe.matter', 'memoryOnly') || {}).types || {};\nconst last = global.get('last', 'default') || {};\n\nconst rows = Object.values(devices)\n    .sort((a, b) => String(a.room || '').localeCompare(String(b.room || '')) || String(a.name).localeCompare(String(b.name)))\n    .map(d => {\n        const uids = Array.isArray(d.entities) ? d.entities : [];\n        const first = uids[0];\n        const value = first !== undefined ? (catalog.values[first] !== undefined ? catalog.values[first] : last[first]) : undefined;\n\n        return {\n            'id': d.id,\n            'room': d.room || '',\n            'name': d.name,\n            'type': types[d.type] ? types[d.type].label : d.type,\n            'entities': uids.length > 0 ? uids.map(uid => entityLabel(catalog, uid)).join(', ') : 'aucune',\n            'state': value !== undefined ? stateText(d.type, catalog.entities[first], value) : '',\n            'active': d.active === true ? 'Oui' : 'Non'\n        };\n    });\n\nreturn {\n    'payload': rows\n};\n",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -2096,63 +2183,332 @@
         "libs": [],
         "wires": [
             [
-                "3a3672e7ff8d336a"
-            ],
-            [
-                "67369c7c6ab41484"
-            ],
-            [
-                "0f6b285f273cf8a3"
+                "0eabbfbbfbf20943"
             ]
         ],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
         "x": 430,
         "y": 1040
     },
     {
-        "id": "3a3672e7ff8d336a",
-        "type": "ui-dropdown",
-        "group": "f842aa0e1f6685f8",
-        "name": "custom - tests - switch",
-        "label": "Prise de test",
-        "tooltip": "",
-        "order": 1,
-        "width": "6",
-        "height": "1",
+        "id": "0eabbfbbfbf20943",
+        "type": "ui-table",
+        "z": "48135a54600713e8",
+        "g": "12b6a0a760455166",
+        "group": "e185630021805b49",
+        "name": "custom - devices - table",
+        "label": "",
+        "order": 2,
+        "width": "12",
+        "height": 0,
+        "maxrows": 20,
         "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
+        "autocols": false,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
             {
-                "label": "",
-                "value": "",
-                "type": "str"
+                "title": "Pièce",
+                "key": "room",
+                "keyType": "key",
+                "type": "text",
+                "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "Nom",
+                "key": "name",
+                "keyType": "key",
+                "type": "text",
+                "width": "25%",
+                "align": "start"
+            },
+            {
+                "title": "Type",
+                "key": "type",
+                "keyType": "key",
+                "type": "text",
+                "width": "12%",
+                "align": "start"
+            },
+            {
+                "title": "Entités",
+                "key": "entities",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Etat",
+                "key": "state",
+                "keyType": "key",
+                "type": "text",
+                "width": "12%",
+                "align": "start"
+            },
+            {
+                "title": "Actif",
+                "key": "active",
+                "keyType": "key",
+                "type": "text",
+                "width": "8%",
+                "align": "start"
             }
         ],
-        "payload": "",
-        "topic": "test-switch",
-        "topicType": "str",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "dknr-headers",
         "wires": [
             [
-                "aceec9ea820b4e49"
+                "da839c3f1a0e9880"
             ]
         ],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
         "x": 660,
         "y": 1040
     },
     {
-        "id": "67369c7c6ab41484",
+        "id": "da839c3f1a0e9880",
+        "type": "change",
+        "z": "48135a54600713e8",
+        "g": "12b6a0a760455166",
+        "name": "load",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "load",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "wires": [
+            [
+                "627a60a16646159b"
+            ]
+        ],
+        "x": 890,
+        "y": 1040
+    },
+    {
+        "id": "627a60a16646159b",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "12b6a0a760455166",
+        "name": "custom - devices - edit",
+        "mode": "link",
+        "links": [
+            "b354a33eaa3d49af"
+        ],
+        "wires": [],
+        "x": 1120,
+        "y": 1040
+    },
+    {
+        "id": "5edffa8ad699a247",
+        "type": "ui-button",
+        "z": "48135a54600713e8",
+        "g": "12b6a0a760455166",
+        "group": "e185630021805b49",
+        "name": "custom - devices - new",
+        "label": "Nouvel appareil",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "plus",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "new",
+        "topicType": "str",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "wires": [
+            [
+                "627a60a16646159b"
+            ]
+        ],
+        "x": 200,
+        "y": 1100
+    },
+    {
+        "id": "b354a33eaa3d49af",
+        "type": "link in",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "custom - edit",
+        "links": [
+            "d0ee4b417bfa2bb7",
+            "ddab942f6d49a661",
+            "627a60a16646159b"
+        ],
+        "wires": [
+            [
+                "2d7383a2c673a603"
+            ]
+        ],
+        "x": 200,
+        "y": 1220
+    },
+    {
+        "id": "2d7383a2c673a603",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "edit",
+        "func": "\n// Appareils page: edition of a Matter device\n// input topic: load (row of the devices table), new, type, source, add (entity uid),\n//     remove (row of the entities table), save (form), delete, other: render\n// output 1: title / output 2: form / output 3: type selector / output 4: entities table\n// output 5: source selector / output 6: entity selector / output 7: delete button\n// output 8: notification / output 9: refresh of the devices table / output 10: devices changed (custom - matter)\n// output 11: dialog of the device (dashboard control, only for the client who asked)\n\n// DKNR entity usable by a device type (see custom - describe)\nfunction compatible(type, def) {\n    if (typeof def !== 'object' || def === null || typeof types[type] !== 'object') {\n\n        return false;\n    }\n\n    return types[type].entities.includes(def.type);\n}\n\n// DKNR entity names: source / parent / entity\nfunction entityNames(catalog, uid) {\n    const path = String(uid).split('/');\n    const def = (catalog.entities || {})[uid];\n\n    return {\n        'source': (catalog.sources || {})[path[0]] || path[0] || '',\n        'parent': (catalog.parents || {})[path[0] + '/' + path[1]] || path[1] || '',\n        'entity': def ? def.name : (path[2] || ''),\n        'unit': def ? def.unit : '',\n        'known': def !== undefined\n    };\n}\n\n// DKNR entity readable name: parent / entity\nfunction entityLabel(catalog, uid) {\n    const n = entityNames(catalog, uid);\n\n    return n.parent + ' / ' + n.entity + (n.known ? '' : ' (introuvable)');\n}\n\n// DKNR value with its unit\nfunction entityValue(catalog, uid) {\n    const def = (catalog.entities || {})[uid] || {};\n    const value = (catalog.values || {})[uid];\n    if (value === undefined || value === null || value === '') {\n\n        return '';\n    }\n    if (typeof def.options === 'object' && def.options !== null && def.options[value] !== undefined) {\n\n        return String(def.options[value]);\n    }\n    if (def.type === 'binary') {\n        const on = [true, 1, '1', 'true', 'ON', 'on'].includes(value);\n\n        return on ? '1' : '0';\n    }\n    const unit = ['', 'rb', 'chex'].includes(def.unit || '') ? '' : ' ' + def.unit;\n\n    return (typeof value === 'object' ? JSON.stringify(value) : String(value)) + unit;\n}\n\nlet devices = global.get('devices', 'default') || {};\nconst catalog = global.get('catalog', 'memoryOnly') || { 'sources': {}, 'parents': {}, 'entities': {}, 'values': {} };\nconst types = (global.get('describe.matter', 'memoryOnly') || {}).types || {};\n\nconst empty = () => ({ 'id': '', 'name': '', 'room': '', 'type': 'switch', 'entities': [], 'active': true, 'source': '', 'confirm': false });\n\nlet edit = flow.get('edit', 'memoryOnly');\nif (typeof edit !== 'object' || edit === null) {\n    edit = empty();\n}\n\nlet out = [null, null, null, null, null, null, null, null, null, null, null];\nconst dialog = show => {\n    out[10] = { 'payload': { 'groups': { [show ? 'show' : 'hide']: ['5dd9725753744d84'] } }, '_client': msg._client };\n};\nlet full = false;\nconst notify = text => {\n    out[7] = { 'payload': text };\n};\n\nfunction load(id) {\n    const d = devices[id];\n    edit = empty();\n    if (typeof d === 'object') {\n        edit.id = d.id;\n        edit.name = d.name;\n        edit.room = d.room || '';\n        edit.type = d.type;\n        edit.entities = Array.isArray(d.entities) ? [...d.entities] : [];\n        edit.active = d.active === true;\n        // source of the first entity\n        edit.source = edit.entities.length > 0 ? String(edit.entities[0]).split('/')[0] : '';\n    }\n    full = true;\n}\n\nfunction newId() {\n    let id;\n    do {\n        id = Array.from({ 'length': 16 }, () => Math.floor(Math.random() * 16).toString(16)).join('');\n    } while (devices[id] !== undefined);\n\n    return id;\n}\n\nswitch (msg.topic) {\n    case 'load':\n        load(typeof msg.payload === 'object' && msg.payload !== null ? msg.payload.id : String(msg.payload || ''));\n        dialog(true);\n        break;\n\n    case 'new':\n        load('');\n        dialog(true);\n        break;\n\n    case 'type':\n        if (typeof types[msg.payload] === 'object') {\n            edit.type = msg.payload;\n        }\n        edit.confirm = false;\n        break;\n\n    case 'source':\n        edit.source = typeof msg.payload === 'string' ? msg.payload : '';\n        edit.confirm = false;\n        break;\n\n    case 'add':\n        if (typeof msg.payload === 'string' && msg.payload !== '' && !edit.entities.includes(msg.payload)) {\n            edit.entities.push(msg.payload);\n        }\n        edit.confirm = false;\n        break;\n\n    case 'remove':\n        if (typeof msg.payload === 'object' && msg.payload !== null) {\n            edit.entities = edit.entities.filter(uid => uid !== msg.payload.uid);\n        }\n        edit.confirm = false;\n        break;\n\n    case 'save': {\n        const form = typeof msg.payload === 'object' && msg.payload !== null ? msg.payload : {};\n        const name = String(form.name || '').trim().replace(/\\s+/g, ' ');\n        const room = String(form.room || '').trim().replace(/\\s+/g, ' ');\n        const active = form.active === true;\n        edit.confirm = false;\n\n        if (name === '') {\n            notify('Le nom est obligatoire');\n            break;\n        }\n        if (Object.values(devices).some(d => d.id !== edit.id && String(d.name).toLowerCase() === name.toLowerCase())) {\n            notify('Un autre appareil s\\'appelle déjà « ' + name + ' »');\n            break;\n        }\n        const wrong = edit.entities.filter(uid => catalog.entities[uid] !== undefined && !compatible(edit.type, catalog.entities[uid]));\n        if (wrong.length > 0) {\n            notify('Entités incompatibles avec le type ' + types[edit.type].label + ' : ' + wrong.map(uid => entityLabel(catalog, uid)).join(', '));\n            break;\n        }\n        if (active && edit.entities.length === 0) {\n            notify('Un appareil actif doit avoir au moins une entité');\n            break;\n        }\n\n        edit.name = name;\n        edit.room = room;\n        edit.active = active;\n\n        const id = edit.id || newId();\n        const old = devices[id] || {};\n        devices[id] = {\n            'id': id,\n            // bridge publishing the device, kept: moving a device to another bridge creates a new device on controllers\n            'bridge': old.bridge || 'main',\n            'name': name,\n            'room': room,\n            'type': edit.type,\n            'entities': [...edit.entities],\n            'active': active,\n            'updated': Date.now()\n        };\n        global.set('devices', devices, 'default');\n        edit.id = id;\n\n        notify('Appareil « ' + name + ' » enregistré');\n        out[8] = { 'topic': 'saved' };\n        out[9] = { 'action': 'sync' };\n        full = true;\n        dialog(false);\n        break;\n    }\n\n    case 'delete':\n        if (edit.id === '' || typeof devices[edit.id] !== 'object') {\n            break;\n        }\n        if (edit.confirm !== true) {\n            edit.confirm = true;\n            break;\n        }\n        notify('Appareil « ' + devices[edit.id].name + ' » supprimé');\n        delete devices[edit.id];\n        global.set('devices', devices, 'default');\n        load('');\n        out[8] = { 'topic': 'deleted' };\n        out[9] = { 'action': 'sync' };\n        dialog(false);\n        break;\n\n    default:\n        // page displayed: reload the device, it may have been changed elsewhere (restore)\n        load(edit.id);\n}\n\nflow.set('edit', edit, 'memoryOnly');\n\n// title\nout[0] = { 'payload': edit.id !== '' ? 'Modifier « ' + edit.name + ' »' : 'Nouvel appareil' };\n\n// form and type, only when a device is loaded (keeps what the user is typing)\nif (full) {\n    out[1] = { 'payload': { 'name': edit.name, 'room': edit.room, 'active': edit.active } };\n    out[2] = {\n        'payload': edit.type,\n        'options': Object.keys(types).map(k => ({ 'label': types[k].label, 'value': k }))\n    };\n}\n\n// entities of the device, the first one gives the state\nconst command = (types[edit.type] || {}).command === true;\nconst rows = edit.entities.map((uid, i) => {\n    const n = entityNames(catalog, uid);\n    const def = catalog.entities[uid];\n    let role = i === 0 ? (command ? 'état et ordre' : 'état') : (command ? 'ordre' : 'ignorée');\n    if (!n.known) {\n        role = 'introuvable';\n    } else if (!compatible(edit.type, def)) {\n        role = 'incompatible';\n    }\n\n    return {\n        'uid': uid,\n        'source': n.source,\n        'parent': n.parent,\n        'entity': n.entity,\n        'value': entityValue(catalog, uid),\n        'role': role\n    };\n});\nout[3] = { 'payload': rows, 'class': rows.length > 0 ? '' : 'remove' };\n\n// source selector\nconst sources = Object.keys(catalog.sources || {})\n    .sort((a, b) => String(catalog.sources[a]).localeCompare(String(catalog.sources[b])));\nout[4] = {\n    'payload': edit.source,\n    'options': [{ 'label': '', 'value': '' }].concat(sources.map(s => ({ 'label': catalog.sources[s] + (catalog.sources[s] !== s ? ' (' + s + ')' : ''), 'value': s })))\n};\n\n// entities of the source usable by the device type\nlet options = [];\nif (edit.source !== '') {\n    options = Object.keys(catalog.entities)\n        .filter(uid => uid.startsWith(edit.source + '/') && !edit.entities.includes(uid) && compatible(edit.type, catalog.entities[uid]))\n        .map(uid => {\n            const n = entityNames(catalog, uid);\n            // identifier (parent / entity) to tell apart entities of the same name\n            const id = uid.slice(edit.source.length + 1);\n            const unit = ['', 'rb', 'chex'].includes(n.unit || '') ? '' : ', ' + n.unit;\n\n            return { 'label': n.parent + ' / ' + n.entity + ' (' + id + unit + ')', 'value': uid };\n        })\n        .sort((a, b) => a.label.localeCompare(b.label));\n}\nout[5] = {\n    'payload': '',\n    'options': [{ 'label': '', 'value': '' }].concat(options),\n    'class': edit.source !== '' ? '' : 'remove',\n    'enabled': options.length > 0\n};\n\n// delete button\nout[6] = {\n    'payload': '',\n    'class': edit.id !== '' ? '' : 'remove',\n    'ui_update': { 'label': edit.confirm ? 'Confirmer la suppression' : 'Supprimer l\\'appareil' }\n};\n\nreturn out;\n",
+        "outputs": 11,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "wires": [
+            [
+                "425ffc7731031d15"
+            ],
+            [
+                "9c6ad8ab38a96e07"
+            ],
+            [
+                "07cfcfb9566c6155"
+            ],
+            [
+                "dd9cd60858bfca4f"
+            ],
+            [
+                "ff9c27d2339a7277"
+            ],
+            [
+                "7e8727cfb5cb1fc1"
+            ],
+            [
+                "e1a542ad6c36ad2b"
+            ],
+            [
+                "9076341930fcfbfb"
+            ],
+            [
+                "220d4bdd88d84763"
+            ],
+            [
+                "e8aeb7dd4303feed"
+            ],
+            [
+                "49c0dc7986ce528e"
+            ]
+        ],
+        "x": 430,
+        "y": 1220
+    },
+    {
+        "id": "425ffc7731031d15",
+        "type": "ui-text",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "group": "5dd9725753744d84",
+        "order": 1,
+        "width": "6",
+        "height": 0,
+        "name": "custom - edit - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "wires": [],
+        "x": 660,
+        "y": 1220
+    },
+    {
+        "id": "9c6ad8ab38a96e07",
+        "type": "ui-form",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "custom - edit - form",
+        "group": "5dd9725753744d84",
+        "label": "",
+        "order": 6,
+        "width": "6",
+        "height": 0,
+        "options": [
+            {
+                "label": "Nom",
+                "key": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Pièce",
+                "key": "room",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Actif",
+                "key": "active",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "room": "",
+            "active": true
+        },
+        "submit": "Enregistrer",
+        "cancel": "",
+        "resetOnSubmit": false,
+        "topic": "save",
+        "topicType": "str",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "wires": [
+            [
+                "2d7383a2c673a603"
+            ]
+        ],
+        "x": 660,
+        "y": 1280
+    },
+    {
+        "id": "07cfcfb9566c6155",
         "type": "ui-dropdown",
-        "group": "f842aa0e1f6685f8",
-        "name": "custom - tests - temperature",
-        "label": "Température de test",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "group": "5dd9725753744d84",
+        "name": "custom - edit - type",
+        "label": "Type",
         "tooltip": "",
         "order": 2,
         "width": "6",
@@ -2169,28 +2525,28 @@
             }
         ],
         "payload": "",
-        "topic": "test-temperature",
+        "topic": "type",
         "topicType": "str",
         "className": "",
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "wires": [
             [
-                "aceec9ea820b4e49"
+                "2d7383a2c673a603"
             ]
         ],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
         "x": 660,
-        "y": 1100
+        "y": 1340
     },
     {
-        "id": "0f6b285f273cf8a3",
+        "id": "dd9cd60858bfca4f",
         "type": "ui-table",
-        "group": "f842aa0e1f6685f8",
-        "name": "custom - tests - values",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "group": "5dd9725753744d84",
+        "name": "custom - edit - entities",
         "label": "",
-        "order": 3,
+        "order": 5,
         "width": "6",
         "height": 0,
         "maxrows": 0,
@@ -2198,19 +2554,35 @@
         "autocols": false,
         "showSearch": false,
         "deselect": true,
-        "selectionType": "none",
+        "selectionType": "click",
         "columns": [
             {
-                "title": "",
-                "key": "lbl",
+                "title": "Appareil",
+                "key": "parent",
                 "keyType": "key",
                 "type": "text",
-                "width": "45%",
-                "align": "end"
+                "width": "35%",
+                "align": "start"
             },
             {
-                "title": "",
-                "key": "val",
+                "title": "Entité",
+                "key": "entity",
+                "keyType": "key",
+                "type": "text",
+                "width": "30%",
+                "align": "start"
+            },
+            {
+                "title": "Valeur",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "Rôle",
+                "key": "role",
                 "keyType": "key",
                 "type": "text",
                 "width": "",
@@ -2220,66 +2592,211 @@
         "mobileBreakpoint": "sm",
         "mobileBreakpointType": "defaults",
         "action": "replace",
-        "className": "",
-        "wires": [
-            []
-        ],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
-        "x": 660,
-        "y": 1160
-    },
-    {
-        "id": "aceec9ea820b4e49",
-        "type": "function",
-        "name": "save",
-        "func": "\n// Prototype: entity chosen for a test device (topic = device id, payload = entity uid, empty to remove the device)\n// devices have the same format as dknr-alexa: { id, name, room, type, entities, active }\n// output 1: devices changed (custom - matter) / output 2: refresh of the page\n\nconst cfg = global.get('describe.matter', 'memoryOnly') || {};\nconst test = (cfg.tests || {})[msg.topic];\n\nif (typeof test !== 'object') {\n\n    return;\n}\n\nlet devices = global.get('devices', 'default') || {};\nconst uid = typeof msg.payload === 'string' ? msg.payload : '';\n\nif (uid === '') {\n    delete devices[msg.topic];\n} else {\n    devices[msg.topic] = {\n        'id': msg.topic,\n        'name': test.name,\n        'room': '',\n        'type': test.type,\n        'entities': [uid],\n        'active': true\n    };\n}\nglobal.set('devices', devices, 'default');\n\nreturn [{ 'action': 'sync' }, { 'topic': 'devices' }];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
+        "className": "dknr-headers",
         "wires": [
             [
-                "1e65b97d22786c1f"
-            ],
-            [
-                "24129fe41d65a6f4"
+                "7546a91412581734"
             ]
         ],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
-        "x": 890,
-        "y": 1040
+        "x": 660,
+        "y": 1400
     },
     {
-        "id": "1e65b97d22786c1f",
+        "id": "ff9c27d2339a7277",
+        "type": "ui-dropdown",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "group": "5dd9725753744d84",
+        "name": "custom - edit - source",
+        "label": "Source des entités",
+        "tooltip": "",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "source",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onClose",
+        "wires": [
+            [
+                "2d7383a2c673a603"
+            ]
+        ],
+        "x": 660,
+        "y": 1460
+    },
+    {
+        "id": "7e8727cfb5cb1fc1",
+        "type": "ui-dropdown",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "group": "5dd9725753744d84",
+        "name": "custom - edit - entity",
+        "label": "Ajouter une entité",
+        "tooltip": "",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "add",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onClose",
+        "wires": [
+            [
+                "2d7383a2c673a603"
+            ]
+        ],
+        "x": 660,
+        "y": 1520
+    },
+    {
+        "id": "e1a542ad6c36ad2b",
+        "type": "ui-button",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "group": "5dd9725753744d84",
+        "name": "custom - edit - delete",
+        "label": "Supprimer l'appareil",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "delete",
+        "topicType": "str",
+        "buttonColor": "#ff6666",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "wires": [
+            [
+                "2d7383a2c673a603"
+            ]
+        ],
+        "x": 660,
+        "y": 1580
+    },
+    {
+        "id": "9076341930fcfbfb",
         "type": "link out",
-        "name": "custom - tests - matter",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "custom - edit - notify",
+        "mode": "link",
+        "links": [
+            "fc147ee782462bbe"
+        ],
+        "wires": [],
+        "x": 660,
+        "y": 1640
+    },
+    {
+        "id": "220d4bdd88d84763",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "custom - edit - saved",
+        "mode": "link",
+        "links": [
+            "c4c1c82291420a48"
+        ],
+        "wires": [],
+        "x": 660,
+        "y": 1700
+    },
+    {
+        "id": "e8aeb7dd4303feed",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "custom - edit - matter",
         "mode": "link",
         "links": [
             "ca26314f1439c15f"
         ],
         "wires": [],
-        "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
-        "x": 1120,
-        "y": 1040
+        "x": 660,
+        "y": 1760
     },
     {
-        "id": "24129fe41d65a6f4",
+        "id": "49c0dc7986ce528e",
         "type": "link out",
-        "name": "custom - tests - refresh",
+        "z": "48135a54600713e8",
+        "g": "a92dd164c5136833",
+        "name": "custom - edit - dialog",
         "mode": "link",
         "links": [
-            "b0ebd3ad8d81c265",
-            "edd988e3b6005cfa"
+            "300df28f3025dc33"
         ],
         "wires": [],
+        "x": 660,
+        "y": 1820
+    },
+    {
+        "id": "7546a91412581734",
+        "type": "change",
         "z": "48135a54600713e8",
-        "g": "2ed8f7b04f4e6fcb",
-        "x": 1120,
-        "y": 1100
+        "g": "a92dd164c5136833",
+        "name": "remove",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "remove",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "wires": [
+            [
+                "2d7383a2c673a603"
+            ]
+        ],
+        "x": 890,
+        "y": 1220
     }
 ]

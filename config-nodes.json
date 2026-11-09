@@ -100,7 +100,7 @@
         "cols": "12"
       }
     ],
-    "order": 2,
+    "order": 3,
     "className": "",
     "visible": "true",
     "disabled": "false"
@@ -120,12 +120,12 @@
     "groupType": "default"
   },
   {
-    "id": "71c85182a70747e0",
+    "id": "d76eccb028da284f",
     "type": "ui-page",
-    "name": "bridge",
+    "name": "devices",
     "ui": "df7710b4b2c4e55b",
     "path": "/",
-    "icon": "bridge",
+    "icon": "devices",
     "layout": "notebook",
     "theme": "877e716e64a22cf1",
     "breakpoints": [
@@ -151,6 +151,72 @@
       }
     ],
     "order": 1,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "e185630021805b49",
+    "type": "ui-group",
+    "name": "Appareils Matter",
+    "page": "d76eccb028da284f",
+    "width": "12",
+    "height": 1,
+    "order": 1,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default",
+    "keepLoaded": false
+  },
+  {
+    "id": "5dd9725753744d84",
+    "type": "ui-group",
+    "name": "ui - dialog - device",
+    "page": "d76eccb028da284f",
+    "width": "6",
+    "height": 1,
+    "order": 2,
+    "showTitle": false,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "dialog",
+    "keepLoaded": true
+  },
+  {
+    "id": "71c85182a70747e0",
+    "type": "ui-page",
+    "name": "bridge",
+    "ui": "df7710b4b2c4e55b",
+    "path": "/bridge",
+    "icon": "bridge",
+    "layout": "notebook",
+    "theme": "877e716e64a22cf1",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Small Desktop",
+        "px": "768",
+        "cols": "9"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "order": 2,
     "className": "",
     "visible": "true",
     "disabled": "false"
@@ -201,28 +267,13 @@
     "keepLoaded": false
   },
   {
-    "id": "f842aa0e1f6685f8",
-    "type": "ui-group",
-    "name": "Appareils de test",
-    "page": "71c85182a70747e0",
-    "width": "6",
-    "height": 1,
-    "order": 4,
-    "showTitle": true,
-    "className": "",
-    "visible": "true",
-    "disabled": "false",
-    "groupType": "default",
-    "keepLoaded": false
-  },
-  {
     "id": "523ce0ffd567ef04",
     "type": "ui-group",
     "name": "Sources DKNR",
     "page": "71c85182a70747e0",
-    "width": "6",
+    "width": "12",
     "height": 1,
-    "order": 5,
+    "order": 4,
     "showTitle": true,
     "className": "",
     "visible": "true",

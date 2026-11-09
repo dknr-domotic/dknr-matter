@@ -23,11 +23,13 @@ But principal : remplacer à terme **dknr-alexa** et son abonnement Virtual Smar
 ## Etat d'avancement
 
 * **Brique Matter** : option **A** retenue (Node-RED + matter.js, `@matter/main` 0.18).
-* **Prototype** (version 0.1) : structure du dépôt reprise de dknr-alexa, pont `main`, page **Pont** (état, appairage par QR code, contrôleurs appairés, sources) et deux appareils de test (prise, température) choisis depuis le tableau de bord.
-* **Appareils** : pas d'import de la sauvegarde dknr-alexa, les appareils seront créés à la main dans dknr-matter (choix de novembre 2026).
+* **Prototype** (version 0.1) : structure du dépôt reprise de dknr-alexa, pont `main`, page **Pont** (état, appairage par QR code, contrôleurs appairés, sources) et deux appareils de test (prise, température).
+* **Prototype validé avec un Echo** (novembre 2026) : appairage par QR code dans Alexa, pont et prise ajoutés, ordre d'Alexa vers `dknr/set`, changement d'état DKNR vu dans Alexa, température ajoutée sans nouvel appairage, appareils toujours pilotables après un redémarrage du conteneur.
+* **Version 0.2** : page **Appareils** reprise de dknr-alexa (nom, pièce, type, entités, actif) à la place des appareils de test, et types lumière, variateur, prise, volet, ouverture, mouvement, température et humidité. Les deux appareils de test déjà créés restent dans la liste comme des appareils ordinaires.
+* **Appareils** : pas d'import de la sauvegarde dknr-alexa, les appareils sont créés à la main dans dknr-matter (choix de novembre 2026).
 * **Ponts** : rangés par identifiant dans le code, un seul créé (`main`). Le choix entre un pont unique et plusieurs ponts reste ouvert jusqu'aux tests de stabilité sur un Echo : déplacer un appareil d'un pont à un autre le recrée dans les contrôleurs, il faut donc trancher avant la bascule depuis dknr-alexa.
-* **Vérifié sans contrôleur** : démarrage du pont dans Node-RED, codes d'appairage conservés au redéploiement et au redémarrage, ajout et retrait d'appareils à chaud, valeurs DKNR écrites dans les appareils Matter, ouverture et réinitialisation de l'appairage, refus de démarrer sans IPv6 ou si le port est pris (sans arrêter Node-RED).
-* **Reste à valider avec du matériel** : appairage à Home Assistant puis à un Echo Show 5, ordres d'un contrôleur vers `dknr/set`, stabilité dans le temps.
+* **Latence observée** : plusieurs secondes entre un changement d'état côté DKNR et son affichage dans l'application Alexa du téléphone. Sans gêne pour la commande vocale. Origine à confirmer (le pont écrit l'attribut Matter dès la réception de la valeur MQTT) : comparer avec Home Assistant comme second contrôleur, ou avec les journaux de matter.js (`DKNR_MATTER_LOG: debug`).
+* **Reste à valider avec du matériel** : les nouveaux types dans Alexa (variateur, volet, ouverture, mouvement, humidité), la stabilité dans le temps, Home Assistant comme second contrôleur.
 * **Points relevés** :
     * matter.js ouvre ses sockets en arrière-plan : une erreur à ce moment arrête Node-RED. Le port UDP et IPv6 sont donc testés avant chaque démarrage du pont.
     * le code « à l'arrêt » d'un nœud function n'est pas attendu par Node-RED : le nouveau pont attend la fin de la fermeture de l'ancien avant de démarrer.

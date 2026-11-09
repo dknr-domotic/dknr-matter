@@ -10,15 +10,14 @@
 
 **dknr-matter** publie les entités des autres projets DKNR (Zigbee, Z-Wave, RFXCom, Daikin...), lues sur MQTT, comme des appareils **Matter** grâce à un pont Matter (*bridge*). Les contrôleurs Matter de la maison (Echo d'Amazon, Home Assistant, Apple Maison, Google Home...) les voient comme des appareils natifs et les pilotent en local : aucun serveur tiers, aucun abonnement, aucune connexion entrante ou sortante vers internet.
 
-> **Prototype.** Cette première version sert à valider la brique Matter ([matter.js](https://github.com/project-chip/matter.js) dans Node-RED) : elle publie deux appareils de test, une prise et une température, choisis depuis le tableau de bord. La page Appareils et les autres types d'appareils viendront ensuite, voir [docs/CONCEPTION.md](docs/CONCEPTION.md).
-
-
 ## Fonctionnalités
 
 - **Pont Matter** sur le réseau local (Matter sur IP, sans Thread), appairé par QR code ou code manuel depuis le tableau de bord.
 - **Plusieurs contrôleurs** sur le même pont (ex : Alexa et Home Assistant), avec la liste des contrôleurs appairés.
 - **Toutes les sources DKNR** : les entités sont lues depuis la discovery DKNR, sans dépendre de dknr-domotic.
-- **Appareils de test** : une prise (On/Off Plug-in Unit) et une température (Temperature Sensor).
+- **Types d'appareils** : lumière, variateur, prise, volet, ouverture (porte, fenêtre, baie), mouvement, température, humidité.
+- **Appareils groupés** : un appareil Matter peut piloter plusieurs entités (ex : « guirlande » = deux prises).
+- **Appareils ajoutés, modifiés et retirés à chaud**, sans appairer à nouveau le pont.
 - **Appairage conservé** au redémarrage et à la mise à jour du conteneur.
 
 
@@ -69,9 +68,22 @@ Pour ajouter un autre contrôleur au même pont, cliquez sur **Ouvrir l'appairag
 
 Si le pont ne démarre pas (IPv6 indisponible, port UDP déjà utilisé), son état l'indique et le bouton **Réessayer** relance le démarrage une fois le problème corrigé.
 
-### Appareils de test
+### Appareils
 
-Dans le cadre **Appareils de test** de la page **Pont**, choisissez l'entité DKNR de la **prise de test** (entité binaire, ou variateur) et celle de la **température de test**. L'appareil est ajouté au pont dès le choix, sans nouvel appairage ; choisir **Aucune** le retire du pont et des contrôleurs.
+Dans la page **Appareils** :
+
+1. **Nouvel appareil**, ou cliquez sur un appareil de la liste : la fenêtre de modification s'ouvre.
+2. Choisissez le **type**, puis une **source** et ajoutez une ou plusieurs **entités** (seules les entités compatibles avec le type sont proposées, avec leur identifiant entre parenthèses). Cliquez sur une entité pour la retirer.
+3. Saisissez le **nom** (celui que verront les contrôleurs, utilisé à la voix par Alexa) et la **pièce**, puis **Enregistrer** : la fenêtre se ferme.
+
+L'appareil est publié sur le pont dès l'enregistrement et apparaît dans les contrôleurs appairés, sans nouvel appairage. Un changement de nom ou d'entités est pris en compte de la même façon.
+
+La pièce sert à classer les appareils dans la liste : Matter ne la transmet pas, rangez aussi l'appareil dans la même pièce de l'application du contrôleur.
+
+A savoir avant de modifier un appareil déjà utilisé dans un contrôleur :
+
+* **Désactiver** ou **supprimer** un appareil le retire du pont : les contrôleurs l'oublient, avec ses pièces, groupes et routines. Le réactiver crée un nouvel appareil dans les contrôleurs.
+* **Changer le type** d'un appareil le remplace aussi par un nouvel appareil dans les contrôleurs.
 
 
 ## Fonctionnement
@@ -82,8 +94,16 @@ L'état d'un appareil Matter vient de sa première entité (`dknr/get/<source>/<
 
 | Type | Entité DKNR | Appareil Matter | Etat Matter |
 |---|---|---|---|
-| Prise | binaire, ou nombre (variateur) | On/Off Plug-in Unit | allumé si `1` (`0` pour l'unité `rb`) ou supérieur à 0 |
+| Lumière | binaire, ou nombre (variateur) | On/Off Light | allumé si `1` ou supérieur à 0 |
+| Variateur | nombre (0-99) | Dimmable Light | allumé si supérieur à 0, niveau 1-254 |
+| Prise | binaire, ou nombre (variateur) | On/Off Plug-in Unit | allumé si `1` ou supérieur à 0 |
+| Volet | nombre (0-99 ou 0-100) ou binaire | Window Covering | position, `99` et plus = ouvert |
+| Ouverture | binaire | Contact Sensor | ouvert si `1` |
+| Mouvement | binaire | Occupancy Sensor | mouvement si `1` |
 | Température | nombre | Temperature Sensor | °C, au centième |
+| Humidité | nombre | Humidity Sensor | %, au centième |
+
+Une entité binaire d'unité `rb` est inversée (`0` = allumé, ouvert, mouvement).
 
 Seuls les changements sont écrits. La dernière valeur des entités utilisées est conservée : après un redémarrage, les états sont rétablis sans attendre que chaque entité change, même pour les sources qui ne conservent pas leurs valeurs sur le serveur MQTT (ex : RFXCom).
 
@@ -91,9 +111,11 @@ Seuls les changements sont écrits. La dernière valeur des entités utilisées 
 
 Un ordre d'un contrôleur est publié sur `dknr/set/<source>/<parent>/<entité>` pour chaque entité de l'appareil :
 
-* Prise : `1` / `0` pour une entité binaire. Pour un variateur (nombre), « allume » envoie `99` (sauf s'il est déjà allumé, son niveau est conservé) et « éteins » `0`.
+* Lumière et prise : `1` / `0` pour une entité binaire. Pour une entité variateur (nombre), « allume » envoie `99` (sauf s'il est déjà allumé, son niveau est conservé) et « éteins » `0`.
+* Variateur : le niveau demandé, de `1` à `99`, et `0` pour éteindre.
+* Volet : le pourcentage d'ouverture demandé, `99` au plus (ouverture complète Z-Wave). Pour une entité binaire, `1` à partir de 50 % d'ouverture.
 
-Seuls les changements venus d'un contrôleur sont publiés, pas ceux écrits depuis une valeur DKNR : un ordre ne revient pas en boucle. Si l'entité ne suit pas l'ordre dans les 10 secondes, son état réel est réécrit dans l'appareil Matter.
+Seuls les changements venus d'un contrôleur sont publiés, pas ceux écrits depuis une valeur DKNR : un ordre ne revient pas en boucle. Pendant les 10 secondes qui suivent un ordre, les valeurs des entités sont ignorées pour leur laisser le temps de suivre (un volet en mouvement, un capteur qui republie son ancienne valeur), puis l'état réel est réécrit dans l'appareil Matter.
 
 ### Node-RED
 
@@ -106,8 +128,7 @@ Les identifiants de fabricant et de produit du pont sont ceux de test de la spé
 
 ## A faire
 
-* Page **Appareils** (nom, pièce, type, entités, actif).
-* Autres types : lumière, variateur, ouverture, mouvement, humidité, volet, puis thermostat, serrure et ventilateur.
+* Thermostat, serrure et ventilateur.
 * Sauvegarde et restauration de la configuration.
 
 
