@@ -62,7 +62,7 @@ Correspondance proposée (première version) :
 | Usage DKNR | Type Matter | Remarque |
 | --- | --- | --- |
 | lumière (binaire) | On/Off Light | |
-| lumière (variateur, `%`) | Dimmable Light | niveau 0-254 côté Matter, 0-99 côté DKNR |
+| lumière (variateur, `%`) | Dimmable Light | niveau 0-254 côté Matter, 0-100 côté DKNR |
 | prise, VMC, climatisation, enceintes | On/Off Plug-in Unit | |
 | ouverture (porte, fenêtre, baie) | Contact Sensor | `1` = ouvert sauf unité `rb` ; attention, *StateValue* Matter vaut `true` quand le contact est **fermé** |
 | mouvement | Occupancy Sensor | |

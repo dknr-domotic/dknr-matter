@@ -95,9 +95,9 @@ L'état d'un appareil Matter vient de sa première entité (`dknr/get/<source>/<
 | Type | Entité DKNR | Appareil Matter | Etat Matter |
 |---|---|---|---|
 | Lumière | binaire, ou nombre (variateur) | On/Off Light | allumé si `1` ou supérieur à 0 |
-| Variateur | nombre (0-99) | Dimmable Light | allumé si supérieur à 0, niveau 1-254 |
+| Variateur | nombre (0-100) | Dimmable Light | allumé si supérieur à 0, niveau 1-254 |
 | Prise | binaire, ou nombre (variateur) | On/Off Plug-in Unit | allumé si `1` ou supérieur à 0 |
-| Volet | nombre (0-99 ou 0-100) ou binaire | Window Covering | position, `99` et plus = ouvert |
+| Volet | nombre (0-100) ou binaire | Window Covering | position, `100` = ouvert |
 | Ouverture | binaire | Contact Sensor | ouvert si `1` |
 | Mouvement | binaire | Occupancy Sensor | mouvement si `1` |
 | Température | nombre | Temperature Sensor | °C, au centième |
@@ -111,9 +111,9 @@ Seuls les changements sont écrits. La dernière valeur des entités utilisées 
 
 Un ordre d'un contrôleur est publié sur `dknr/set/<source>/<parent>/<entité>` pour chaque entité de l'appareil :
 
-* Lumière et prise : `1` / `0` pour une entité binaire. Pour une entité variateur (nombre), « allume » envoie `99` (sauf s'il est déjà allumé, son niveau est conservé) et « éteins » `0`.
-* Variateur : le niveau demandé, de `1` à `99`, et `0` pour éteindre.
-* Volet : le pourcentage d'ouverture demandé, `99` au plus (ouverture complète Z-Wave). Pour une entité binaire, `1` à partir de 50 % d'ouverture.
+* Lumière et prise : `1` / `0` pour une entité binaire. Pour une entité variateur (nombre), « allume » envoie `100` (sauf s'il est déjà allumé, son niveau est conservé) et « éteins » `0`.
+* Variateur : le niveau demandé, de `1` à `100`, et `0` pour éteindre.
+* Volet : le pourcentage d'ouverture demandé (0 à 100). Pour une entité binaire, `1` à partir de 50 % d'ouverture.
 
 Seuls les changements venus d'un contrôleur sont publiés, pas ceux écrits depuis une valeur DKNR : un ordre ne revient pas en boucle. Pendant les 10 secondes qui suivent un ordre, les valeurs des entités sont ignorées pour leur laisser le temps de suivre (un volet en mouvement, un capteur qui republie son ancienne valeur), puis l'état réel est réécrit dans l'appareil Matter.
 
